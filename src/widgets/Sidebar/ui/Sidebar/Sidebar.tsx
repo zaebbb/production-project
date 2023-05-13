@@ -1,22 +1,22 @@
-import React from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Sidebar.module.scss';
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {LangSwitcher} from "widgets/LangSwitcher";
-import {useTranslation} from "react-i18next";
+import React from 'react'
+import { classNames } from 'shared/lib/classNames/classNames'
+import cls from './Sidebar.module.scss'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
+import { LangSwitcher } from 'widgets/LangSwitcher'
+import { useTranslation } from 'react-i18next'
 
 interface SidebarProps {
-  className?: string,
-  lang?: string,
+  className?: string
+  lang?: string
 }
 
 export const Sidebar: React.FC<SidebarProps> = (props) => {
-  const [collapse, setCollapse] = React.useState<boolean>(false);
-  const {className, lang} = props
-  const { t } = useTranslation(lang);
+  const [collapse, setCollapse] = React.useState<boolean>(false)
+  const { className, lang } = props
+  const { t } = useTranslation(lang)
 
-  const onToggle = () => {
-    setCollapse(prev => !prev);
+  const onToggle = (): void => {
+    setCollapse(prev => !prev)
   }
 
   return (
@@ -30,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
         )
       }
     >
-      <button onClick={onToggle}>{t('toggle-sidebar')}</button>
+      <button type={'button'} onClick={onToggle}>{t('toggle-sidebar')}</button>
 
       <div className={cls.switchers}>
         <ThemeSwitcher />
@@ -40,5 +40,5 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
