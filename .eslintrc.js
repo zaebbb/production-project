@@ -15,7 +15,8 @@ module.exports = {
         project: 'tsconfig.json',
     },
     "plugins": [
-        "react"
+        "react",
+        "i18next"
     ],
     "rules": {
         // отступы 2 пробела
@@ -48,6 +49,7 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         // использование camelCase
         '@typescript-eslint/naming-convention': 'warn',
+        "i18next/no-literal-string": ['warn', {markupOnly: true}]
     },
     globals: {
         '__IS_DEV__': true,
