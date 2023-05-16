@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { BugButton } from 'app/providers/ErrorBoundary'
 
 interface MainPageProps {
   className?: string
@@ -13,6 +14,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
   return (
     <div>
       {t('title')}
+      <BugButton />
     </div>
   )
 }

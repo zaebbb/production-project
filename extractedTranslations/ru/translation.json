@@ -3,6 +3,8 @@
   "link-about": "link-about",
   "link-main": "link-main",
   "not-found": "not-found",
+  "reload-page": "reload-page",
   "title": "title",
-  "toggle-sidebar": "toggle-sidebar"
+  "toggle-sidebar": "toggle-sidebar",
+  "unexpected-error": "unexpected-error"
 }
