@@ -3,5 +3,5 @@ import ErrorBoundary from './ui/ErrorBoundary'
 
 export {
   BugButton,
-  ErrorBoundary
+  ErrorBoundary,
 }
