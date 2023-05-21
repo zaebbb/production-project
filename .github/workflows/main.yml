@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 jobs:
   pipeline:
-    runs-on: [ windows-2019 ]
+    runs-on: [ macos-latest ]
     strategy:
       matrix:
         node-version: [ 17.x ]
@@ -31,4 +31,4 @@ jobs:
       - name: Сборка Storybook
         run: npm run storybook:build
       - name: Регрессионное тестирование (Скриншотное тестирование)
-        run: npx loki --requireReference --reactUri file:./storybook-static
+        run: npm run test:ui:ci
