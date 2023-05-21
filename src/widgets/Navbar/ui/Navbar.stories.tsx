@@ -6,7 +6,6 @@ import { Navbar } from 'widgets/Navbar'
 const meta: Meta<typeof Navbar> = {
   title: 'widgets/Navbar',
   component: Navbar,
-  tags: ['autodocs'],
 }
 
 export default meta
