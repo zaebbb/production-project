@@ -1,4 +1,7 @@
 {
   "language": "Русский",
-  "toggle-sidebar": "Сменить"
+  "language-short": "Рус.",
+  "toggle-sidebar": "Сменить",
+  "link-main": "Главная",
+  "link-about": "О нас"
 }

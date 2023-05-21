@@ -1,4 +1,7 @@
 {
   "language": "English",
-  "toggle-sidebar": "Toggle"
+  "language-short": "Eng.",
+  "toggle-sidebar": "Toggle",
+  "link-main": "Main",
+  "link-about": "About"
 }

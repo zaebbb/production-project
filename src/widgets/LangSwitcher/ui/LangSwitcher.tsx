@@ -6,10 +6,15 @@ import { useTranslation } from 'react-i18next'
 interface LangSwitcherProps {
   className?: string
   lang?: string
+  short?: boolean
 }
 
 export const LangSwitcher: React.FC<LangSwitcherProps> = (props) => {
-  const { className, lang } = props
+  const {
+    className,
+    lang,
+    short,
+  } = props
   const { t, i18n } = useTranslation(lang)
 
   const toggle = (): void => {
@@ -27,7 +32,7 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = (props) => {
         [className]
       )}
     >
-      {t('language')}
+      {t(!short ? 'language' : 'language-short')}
     </Button>
   )
 }
