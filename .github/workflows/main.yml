@@ -18,17 +18,28 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Установка зависимостей
         run: npm install
+
       - name: Продакшен сборка проекта
         run: npm run build:prod
+
       - name: Линтер Typescript
+        if: always()
         run: npm run lint:ts
+
       - name: Линтер CSS|SCSS
+        if: always()
         run: npm run lint:scss
+
       - name: Unit-тестирование
+        if: always()
         run: npm run test:unit
+
       - name: Сборка Storybook
         run: npm run storybook:build
+
       - name: Регрессионное тестирование (Скриншотное тестирование)
+        if: always()
         run: npm run test:ui:ci
