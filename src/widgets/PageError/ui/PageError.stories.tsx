@@ -6,7 +6,6 @@ import { PageError } from 'widgets/PageError'
 const meta: Meta<typeof PageError> = {
   title: 'widgets/PageError',
   component: PageError,
-  tags: ['autodocs'],
 }
 
 export default meta

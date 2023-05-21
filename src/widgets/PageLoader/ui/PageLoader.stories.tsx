@@ -6,7 +6,6 @@ import { PageLoader } from 'widgets/PageLoader'
 const meta: Meta<typeof PageLoader> = {
   title: 'widgets/PageLoader',
   component: PageLoader,
-  tags: ['autodocs'],
 }
 
 export default meta
