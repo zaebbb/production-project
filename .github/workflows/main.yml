@@ -1,0 +1,30 @@
+name: Линтер кода, Тестирование, Сборка
+run-name: ${{ github.actor }} тестирует Github Actions
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  pipeline:
+    runs-on: [ ubuntu-latest ]
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Установка Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Установка зависимостей
+        run: npm install
+      - name: Продакшен сборка проекта
+        run: npm run build:prod
+      - name: Линтер Typescript
+        run: npm run lint:ts
+      - name: Линтер CSS|SCSS
+        run: npm run lint:scss
+      - name: Unit-тестирование
+        run: npm run test:unit
