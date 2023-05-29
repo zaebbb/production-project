@@ -1,5 +1,8 @@
 {
   "not-found": "Page Not Found",
   "unexpected-error": "An unexpected error has occurred",
-  "reload-page": "Reload"
+  "reload-page": "Reload",
+  "input-password": "Enter Password",
+  "input-login": "Enter Login",
+  "btn-auth": "Authorization"
 }

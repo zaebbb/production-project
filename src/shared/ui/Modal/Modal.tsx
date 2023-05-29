@@ -1,5 +1,7 @@
 import React from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import {
+  classNames,
+} from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 import { Portal } from 'shared/ui/Portal/Portal'
 
@@ -8,6 +10,7 @@ interface ModalProps {
   children?: React.ReactNode
   isOpen?: boolean
   onClose: () => void
+  lazy?: boolean
 }
 
 const ANIMATION_DELAY: number = 300
@@ -18,9 +21,11 @@ export const Modal: React.FC<ModalProps> = (props) => {
     children,
     isOpen = false,
     onClose,
+    lazy,
   } = props
 
-  const [isClosing, setIsClosing] = React.useState<boolean>()
+  const [isClosing, setIsClosing] = React.useState<boolean>(false)
+  const [isMounted, setIsMounted] = React.useState<boolean>(false)
   const timerRef = React.useRef<ReturnType<typeof setTimeout>>()
 
   const closeHandler = React.useCallback(() => {
@@ -59,9 +64,23 @@ export const Modal: React.FC<ModalProps> = (props) => {
     }
   }, [isOpen, onKeyDown])
 
+  React.useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true)
+    }
+  }, [isOpen])
+
+  if (lazy && !isMounted) {
+    return null
+  }
+
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className])}>
+      <div className={
+        classNames(
+          cls.Modal, mods, [className]
+        )}
+      >
         <div
           className={cls.overlay}
           onClick={closeHandler}
