@@ -1,8 +1,16 @@
 .LoginForm {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+
   width: 400px;
   max-width: 100%;
+
+  .title,
+  .error {
+    margin-bottom: 10px;
+  }
 }
 
 .input {

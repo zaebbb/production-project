@@ -4,5 +4,7 @@
   "reload-page": "Reload",
   "input-password": "Enter Password",
   "input-login": "Enter Login",
-  "btn-auth": "Authorization"
+  "btn-auth": "Authorization",
+  "modal-auth-title": "Authorization",
+  "error-auth": "Incorrect Login Or Password"
 }
