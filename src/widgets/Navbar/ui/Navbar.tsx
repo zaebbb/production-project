@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Navbar.module.scss'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
@@ -12,7 +12,7 @@ interface NavbarProps {
   lang?: string
 }
 
-export const Navbar: React.FC<NavbarProps> = (props) => {
+export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
   const {
     className,
     lang,
@@ -66,4 +66,4 @@ export const Navbar: React.FC<NavbarProps> = (props) => {
       )}
     </div>
   )
-}
+})
