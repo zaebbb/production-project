@@ -1,24 +1,23 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
-import { useTranslation } from 'react-i18next'
 import { Button, SizeButton, ThemeButton } from 'shared/ui/Button/Button'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import AboutIcon from 'shared/assets/icons/about.svg'
-import MainIcon from 'shared/assets/icons/main.svg'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import {
+  SidebarItemsList,
+  type SidebarItemType,
+} from '../../model/types/items'
+import { SidebarItem } from 'widgets/Sidebar/ui/SidebarItem/SidebarItem'
 
 interface SidebarProps {
   className?: string
   lang?: string
 }
 
-export const Sidebar: React.FC<SidebarProps> = (props) => {
+export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
   const [collapse, setCollapse] = React.useState<boolean>(false)
   const { className, lang } = props
-  const { t } = useTranslation(lang)
 
   const onToggle = (): void => {
     setCollapse(prev => !prev)
@@ -49,36 +48,14 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
       </Button>
 
       <div className={cls.items}>
-        <AppLink
-          to={RoutePath.main}
-          className={cls.item}
-          theme={AppLinkTheme.SECONDARY}
-        >
-          <MainIcon
-            className={cls.icon}
+        {SidebarItemsList.map((item: SidebarItemType) => (
+          <SidebarItem
+            key={item.path}
+            item={item}
+            lang={lang}
+            collapsed={collapse}
           />
-          <span
-            className={cls.link}
-          >
-            {t('link-main')}
-          </span>
-
-        </AppLink>
-
-        <AppLink
-          to={RoutePath.about}
-          className={cls.item}
-          theme={AppLinkTheme.SECONDARY}
-        >
-          <AboutIcon
-            className={cls.icon}
-          />
-          <span
-            className={cls.link}
-          >
-            {t('link-about')}
-          </span>
-        </AppLink>
+        ))}
       </div>
 
       <div className={cls.switchers}>
@@ -91,4 +68,4 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
       </div>
     </div>
   )
-}
+})
