@@ -19,7 +19,7 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
     className,
     title,
     text,
-    theme,
+    theme = TextTheme.PRIMARY,
   } = props
 
   return (

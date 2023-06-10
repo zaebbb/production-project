@@ -1,7 +1,10 @@
 import React from 'react'
-import { type DynamicModuleLoaderProps, type ReducerEntry } from '../types/DynamicModuleLoaderTypes'
+import { type DynamicModuleLoaderProps } from '../types/DynamicModuleLoaderTypes'
 import { useDispatch, useStore } from 'react-redux'
-import { type ReduxStoreWithManager } from 'app/providers/StoreProvider'
+import {
+  type ReduxStoreWithManager,
+  type StateSchemaKey,
+} from 'app/providers/StoreProvider'
 
 export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) => {
   const {
@@ -13,15 +16,15 @@ export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) =
   const dispatch = useDispatch()
 
   React.useEffect(() => {
-    Object.entries(reducers).forEach(([keyName, reducer]: ReducerEntry) => {
-      store.reducerManager.add(keyName, reducer)
+    Object.entries(reducers).forEach(([keyName, reducer]) => {
+      store.reducerManager.add(keyName as StateSchemaKey, reducer)
       dispatch({ type: `@INIT ${keyName} reducer` })
     })
 
     return () => {
-      Object.entries(reducers).forEach(([keyName, reducer]: ReducerEntry) => {
+      Object.entries(reducers).forEach(([keyName, reducer]) => {
         if (removeAfterUnmount) {
-          store.reducerManager.remove(keyName)
+          store.reducerManager.remove(keyName as StateSchemaKey)
           dispatch({ type: `@DESTROY ${keyName} reducer` })
         }
       })

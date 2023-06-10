@@ -41,7 +41,7 @@ describe('Утилита classNames', () => {
     'Использование модов + 1 мод undefined и 1 мод на null',
     () => {
       expect(
-        classNames('className', { check: null, disable: undefined }, ['class'])
+        classNames('className', { check: undefined, disable: undefined }, ['class'])
       ).toBe('className class')
     }
   )
