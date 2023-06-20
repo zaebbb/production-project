@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { type Additional, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Text.module.scss'
 
 export enum TextTheme {
@@ -7,11 +7,18 @@ export enum TextTheme {
   ERROR = 'error'
 }
 
+export enum TextAlign {
+  CENTER = 'center',
+  RIGHT = 'right',
+  LEFT = 'left'
+}
+
 interface TextProps {
   className?: string
   title?: string
   text?: string
   theme?: TextTheme
+  align?: TextAlign
 }
 
 export const Text: React.FC<TextProps> = memo((props: TextProps) => {
@@ -20,12 +27,19 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
     title,
     text,
     theme = TextTheme.PRIMARY,
+    align = TextAlign.LEFT,
   } = props
+
+  const additional: Additional = [
+    className,
+    cls[theme],
+    cls[align],
+  ]
 
   return (
     <div
       className={
-        classNames(cls.Text, {}, [className, cls[theme]])
+        classNames(cls.Text, {}, additional)
       }
     >
       {title && <p className={cls.title}>{title}</p>}

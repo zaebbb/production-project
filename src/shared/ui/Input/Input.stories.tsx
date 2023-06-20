@@ -22,3 +22,9 @@ export const Placeholder = Template.bind({})
 Placeholder.args = {
   placeholder: 'Input text',
 }
+
+export const Readonly = Template.bind({})
+Readonly.args = {
+  placeholder: 'Input text',
+  readonly: true,
+}

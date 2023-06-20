@@ -7,12 +7,23 @@
 
   color: var(--primary-color);
 
+  appearance: none;
   background: white;
   border: none;
   border-radius: 8px;
   outline: none;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
   &::placeholder {
     color: var(--primary-color);
   }
+}
+
+.readonly {
+  opacity: 0.5;
 }
