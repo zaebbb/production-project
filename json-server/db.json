@@ -44,10 +44,11 @@
     }
   ],
   "profile": {
-    "first": "Vladimir",
+    "first": "Vladimir123",
     "lastname": "Mihailov",
     "age": 20,
     "currency": "RUB",
+    "city": "Ekb",
     "country": "Russia",
     "username": "admin",
     "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"

@@ -1,7 +1,7 @@
 import type { ComponentStory, Meta } from '@storybook/react'
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Text, TextTheme } from './Text'
+import { Text, TextAlign, TextTheme } from './Text'
 
 const meta: Meta<typeof Text> = {
   title: 'shared/Text',
@@ -63,3 +63,24 @@ TextErrorDark.args = {
   theme: TextTheme.ERROR,
 }
 TextErrorDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const TextLeft = Template.bind({})
+TextLeft.args = {
+  title: 'Title',
+  text: 'Description',
+  align: TextAlign.LEFT,
+}
+
+export const TextCenter = Template.bind({})
+TextCenter.args = {
+  title: 'Title',
+  text: 'Description',
+  align: TextAlign.CENTER,
+}
+
+export const TextRight = Template.bind({})
+TextRight.args = {
+  title: 'Title',
+  text: 'Description',
+  align: TextAlign.RIGHT,
+}
