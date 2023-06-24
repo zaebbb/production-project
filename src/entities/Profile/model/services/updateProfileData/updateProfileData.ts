@@ -31,9 +31,13 @@ export const updateProfileData =
           formData
         )
 
+        if (!response.data) {
+          throw new Error()
+        }
+
         return response.data
       } catch (e) {
-        return rejectWithValue([ValidateProfileError.NO_DATA])
+        return rejectWithValue([ValidateProfileError.INTERNAL_SERVER_ERROR])
       }
     }
   )
