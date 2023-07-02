@@ -21,8 +21,10 @@ body {
 }
 
 .page-wrapper {
+  overflow-y: auto;
   flex-grow: 1;
-  padding: 20px;
+  height: calc(100vh - var(--navbar-height));
+  padding: 20px 20px 20px 45px;
 }
 
 #webpack-dev-server-client-overlay {

@@ -1,7 +1,7 @@
 import type { ComponentStory, Meta } from '@storybook/react'
 import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
-import { Text, TextAlign, TextTheme } from './Text'
+import { Text, TextAlign, TextSize, TextTheme } from './Text'
 
 const meta: Meta<typeof Text> = {
   title: 'shared/Text',
@@ -83,4 +83,18 @@ TextRight.args = {
   title: 'Title',
   text: 'Description',
   align: TextAlign.RIGHT,
+}
+
+export const TitleAndTextSizeM = Template.bind({})
+TitleAndTextSizeM.args = {
+  title: 'Title',
+  text: 'Description',
+  size: TextSize.M,
+}
+
+export const TitleAndTextSizeL = Template.bind({})
+TitleAndTextSizeL.args = {
+  title: 'Title',
+  text: 'Description',
+  size: TextSize.L,
 }
