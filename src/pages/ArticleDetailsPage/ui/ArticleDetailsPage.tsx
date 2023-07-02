@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
+import { useParams } from 'react-router-dom'
+import { Text } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
+import { ArticleDetails } from 'entities/Article'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -8,12 +12,22 @@ interface ArticleDetailsPageProps {
 
 const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDetailsPageProps) => {
   const { className } = props
+  const { id } = useParams<{ id: string }>()
+  const { t } = useTranslation('article')
+
+  if (!id) {
+    return (
+      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <Text title={t('article-not-found')} />
+      </div>
+    )
+  }
 
   return (
     <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-      DETAILS
+      <ArticleDetails id={id} />
     </div>
   )
 }
 
-export default ArticleDetailsPage
+export default memo(ArticleDetailsPage)
