@@ -1,4 +1,6 @@
 {
   "error-loading-article": "Ошибка загрузки статьи",
-  "article-not-found": "Статья не найдена"
+  "article-not-found": "Статья не найдена",
+  "article-comments": "Комментарии",
+  "comments-not-found": "Комментарии не обнаружены"
 }
