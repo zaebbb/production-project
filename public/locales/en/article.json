@@ -1,5 +1,6 @@
 {
-
   "error-loading-article": "Error Loading Article",
-  "article-not-found": "Article Not Found"
+  "article-not-found": "Article Not Found",
+  "article-comments": "Comments",
+  "comments-not-found": "Comments not found"
 }
