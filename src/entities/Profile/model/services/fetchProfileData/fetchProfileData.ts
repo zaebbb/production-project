@@ -3,10 +3,10 @@ import { type Profile } from '../../types/profile'
 import { type ThunkConfig } from 'app/providers/StoreProvider'
 
 export const fetchProfileData =
-  createAsyncThunk<Profile, void, ThunkConfig<string>>(
+  createAsyncThunk<Profile, string, ThunkConfig<string>>(
     'profile/fetchProfileData',
     async (
-      _,
+      profileId,
       thunkApi
     ) => {
       const {
@@ -16,7 +16,7 @@ export const fetchProfileData =
 
       try {
         const response = await extra.api.get<Profile>(
-          '/profile'
+          '/profile/' + profileId
         )
 
         if (!response.data) {
