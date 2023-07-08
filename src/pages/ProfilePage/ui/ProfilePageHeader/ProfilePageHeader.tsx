@@ -7,10 +7,12 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
+  getProfileData,
   getProfileReadonly,
   profileActions,
   updateProfileData,
 } from 'entities/Profile'
+import { getUserAuthData } from 'entities/User'
 
 interface ProfilePageHeaderProps {
   className?: string
@@ -20,6 +22,9 @@ export const ProfilePageHeader: React.FC<ProfilePageHeaderProps> = (props) => {
   const { className } = props
   const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
+  const authData = useSelector(getUserAuthData)
+  const profileData = useSelector(getProfileData)
+  const canEdit = authData?.id === profileData?.id
 
   const readonly = useSelector(getProfileReadonly)
 
@@ -38,30 +43,34 @@ export const ProfilePageHeader: React.FC<ProfilePageHeaderProps> = (props) => {
   return (
     <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
       <Text title={t('profile')} />
-      {readonly ? (
-        <Button
-          theme={ThemeButton.OUTLINE}
-          className={cls['edit-btn']}
-          onClick={onEdit}
-        >
-          {t('profile-edit')}
-        </Button>
-      ) : (
+      {canEdit && (
         <>
-          <Button
-            theme={ThemeButton.OUTLINE}
-            className={cls['edit-btn']}
-            onClick={onCancelEdit}
-          >
-            {t('profile-escape')}
-          </Button>
-          <Button
-            theme={ThemeButton.OUTLINE}
-            className={cls['save-btn']}
-            onClick={onSave}
-          >
-            {t('profile-save')}
-          </Button>
+          {readonly ? (
+            <Button
+              theme={ThemeButton.OUTLINE}
+              className={cls['edit-btn']}
+              onClick={onEdit}
+            >
+              {t('profile-edit')}
+            </Button>
+          ) : (
+            <>
+              <Button
+                theme={ThemeButton.OUTLINE}
+                className={cls['edit-btn']}
+                onClick={onCancelEdit}
+              >
+                {t('profile-escape')}
+              </Button>
+              <Button
+                theme={ThemeButton.OUTLINE}
+                className={cls['save-btn']}
+                onClick={onSave}
+              >
+                {t('profile-save')}
+              </Button>
+            </>
+          )}
         </>
       )}
     </div>
