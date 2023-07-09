@@ -157,6 +157,12 @@
       "text": "test",
       "userId": "2",
       "id": "iuLz20P"
+    },
+    {
+      "articleId": "1",
+      "text": "комментарий",
+      "userId": "1",
+      "id": "yoyCTC2"
     }
   ],
   "profile": [
