@@ -2,5 +2,7 @@
   "error-loading-article": "Error Loading Article",
   "article-not-found": "Article Not Found",
   "article-comments": "Comments",
-  "comments-not-found": "Comments not found"
+  "comments-not-found": "Comments not found",
+  "article-read-more": "Read More",
+  "button-back": "Back"
 }
