@@ -20,15 +20,6 @@ body {
   display: flex;
 }
 
-.page-wrapper {
-  overflow-y: auto;
-  flex-grow: 1;
-  flex-shrink: 100;
-
-  height: calc(100vh - var(--navbar-height));
-  padding: 20px 20px 20px 45px;
-}
-
 #webpack-dev-server-client-overlay {
   display: none;
 }

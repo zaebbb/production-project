@@ -5,6 +5,7 @@ import { ArticleList, type ArticleView } from 'entities/Article'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
+  getArticlePageError,
   getArticlePageIsLoading,
   getArticlePageView,
   getArticles,
@@ -14,6 +15,12 @@ import { fetchArticles } from '../model/services/fetchArticles/fetchArticles'
 import { articlesPageActions, articlesPageReducer } from '../model/slice/articlePageSlice'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
 import { ArticleViewSelector } from 'features/ArticleViewSelector'
+import { Page } from 'shared/ui/Page/Page'
+import { useTranslation } from 'react-i18next'
+import {
+  FetchNextArticlePage,
+} from '../model/services/fetchNextArticlePage/fetchNextArticlePage'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
 
 interface ArticlesPageProps {
   className?: string
@@ -29,11 +36,21 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlePageIsLoading)
   const view = useSelector(getArticlePageView)
+  const error = useSelector(getArticlePageError)
+  const { t } = useTranslation('article')
 
   useInitialEffect(() => {
-    dispatch(fetchArticles())
     dispatch(articlesPageActions.initState())
+    dispatch(fetchArticles({
+      page: 1,
+    }))
   })
+
+  const onLoadNextPage = React.useCallback(() => {
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(FetchNextArticlePage())
+    }
+  }, [dispatch])
 
   const onChangeView = React.useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view))
@@ -41,14 +58,22 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticlesPage, {}, [className])}>
+      <Page
+        onScrollEnd={onLoadNextPage}
+        className={classNames(cls.ArticlesPage, {}, [className])}
+      >
+        {
+          error && (
+            <Text title={t('error-load-article-data')} theme={TextTheme.ERROR} />
+          )
+        }
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList
           view={view}
           articles={articles}
           isLoading={isLoading}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

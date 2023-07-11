@@ -19,6 +19,7 @@ import { addCommentForArticle } from '../model/services/addCommentForArticle/add
 import { AddCommentForm } from 'features/addCommentForm'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -51,15 +52,15 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Text title={t('article-not-found')} />
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button
           theme={ThemeButton.OUTLINE}
           onClick={onBackToList}
@@ -76,7 +77,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
           comments={comments}
           isLoading={commentsIsLoading}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

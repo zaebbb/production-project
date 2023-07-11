@@ -15,11 +15,11 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
   } = props
 
   return (
-    <div
+    <article
       className={classNames(cls.Card, {}, [className])}
       {...otherProps}
     >
       {children}
-    </div>
+    </article>
   )
 })

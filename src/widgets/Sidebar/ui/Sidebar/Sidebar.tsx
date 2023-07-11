@@ -24,7 +24,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
   }
 
   return (
-    <div
+    <aside
       data-testid={'sidebar'}
       className={
         classNames(cls.Sidebar,
@@ -47,7 +47,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
         {collapse ? '>' : '<'}
       </Button>
 
-      <div className={cls.items}>
+      <nav className={cls.items}>
         {sidebarItems.map((item: SidebarItemType) => (
           <SidebarItem
             key={item.path}
@@ -56,7 +56,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
             collapsed={collapse}
           />
         ))}
-      </div>
+      </nav>
 
       <div className={cls.switchers}>
         <ThemeSwitcher />
@@ -66,6 +66,6 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
           short={collapse}
         />
       </div>
-    </div>
+    </aside>
   )
 })
