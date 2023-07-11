@@ -18,6 +18,7 @@
   "button-back": "button-back",
   "comments-not-found": "comments-not-found",
   "error-auth": "error-auth",
+  "error-load-article-data": "error-load-article-data",
   "error-load-data": "error-load-data",
   "error-loading-article": "error-loading-article",
   "input-login": "input-login",
