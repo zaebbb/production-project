@@ -11,7 +11,6 @@ import {
   getArticles,
 } from '../model/selectors/articlePageSelectors'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { fetchArticles } from '../model/services/fetchArticles/fetchArticles'
 import { articlesPageActions, articlesPageReducer } from '../model/slice/articlePageSlice'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
 import { ArticleViewSelector } from 'features/ArticleViewSelector'
@@ -21,6 +20,7 @@ import {
   FetchNextArticlePage,
 } from '../model/services/fetchNextArticlePage/fetchNextArticlePage'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { ArticlePageMounted } from '../model/services/articlePageMounted/articlePageMounted'
 
 interface ArticlesPageProps {
   className?: string
@@ -40,10 +40,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
   const { t } = useTranslation('article')
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticles({
-      page: 1,
-    }))
+    dispatch(ArticlePageMounted())
   })
 
   const onLoadNextPage = React.useCallback(() => {
@@ -57,7 +54,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
   }, [dispatch])
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPage}
         className={classNames(cls.ArticlesPage, {}, [className])}
