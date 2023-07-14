@@ -22,7 +22,7 @@ import { useTranslation } from 'react-i18next'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useParams } from 'react-router-dom'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page'
 
 const reducers: ReducerList = {
   profile: profileReducer,

@@ -14,7 +14,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { articlesPageActions, articlesPageReducer } from '../model/slice/articlePageSlice'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
 import { ArticleViewSelector } from 'features/ArticleViewSelector'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page'
 import { useTranslation } from 'react-i18next'
 import {
   FetchNextArticlePage,
