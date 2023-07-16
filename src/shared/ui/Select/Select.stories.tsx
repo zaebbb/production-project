@@ -1,12 +1,12 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { Select, type SelectOption } from './Select'
+import { Select } from './Select'
 
 const meta: Meta<typeof Select> = {
   title: 'shared/Select',
   component: Select,
 }
 
-const options: SelectOption[] = [
+const options = [
   { value: '123', content: '123' },
   { value: '1234', content: '1234' },
   { value: '1235', content: '1235' },

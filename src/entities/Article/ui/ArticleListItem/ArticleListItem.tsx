@@ -48,7 +48,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> =
     const views = (
       <>
         <Text
-          text={String(article.createdAt)}
+          text={String(article.views)}
           className={cls.views}
         />
         <Icon Svg={EyeIcon} />

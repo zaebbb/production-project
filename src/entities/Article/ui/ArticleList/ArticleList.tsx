@@ -3,7 +3,9 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton'
-import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleListItem'
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
+import { useTranslation } from 'react-i18next'
+import { Text } from 'shared/ui/Text/Text'
 
 interface ArticleListProps {
   className?: string
@@ -31,6 +33,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
     isLoading,
     view = ArticleView.SMALL,
   } = props
+  const { t } = useTranslation('article')
 
   const renderArticle = (article: Article) => {
     return (
@@ -40,6 +43,14 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
         article={article}
         view={view}
       />
+    )
+  }
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <Text text={t('articles-not-found')} />
+      </div>
     )
   }
 

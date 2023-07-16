@@ -23,7 +23,7 @@ describe('Тест fetchNextArticlePage.test', () => {
 
       expect(thunk.dispatch).toBeCalledTimes(4)
       expect(thunk.getState).toBeCalledTimes(3)
-      expect(fetchArticles).toBeCalledWith({ page: 3 })
+      expect(fetchArticles).toBeCalledWith({})
     }
   )
 

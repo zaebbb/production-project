@@ -3,7 +3,7 @@ import { LoginModal } from 'features/AuthByUsername'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 const meta: Meta<typeof LoginModal> = {
-  title: 'features/LoginModal',
+  title: 'features/AuthByUsername/LoginModal',
   component: LoginModal,
   argTypes: {
 
