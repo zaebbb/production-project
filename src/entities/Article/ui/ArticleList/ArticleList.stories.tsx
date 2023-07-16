@@ -33,7 +33,7 @@ const article: Article = {
 } satisfies Article
 
 export default {
-  title: 'entities/ArticleList',
+  title: 'entities/Article/ArticleList',
   component: ArticleList,
 } satisfies ComponentMeta<typeof ArticleList>
 
