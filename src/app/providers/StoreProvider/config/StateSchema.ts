@@ -11,7 +11,7 @@ import {
 import { type ProfileSchema } from 'entities/Profile'
 import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsSchema } from 'entities/Article'
-import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { type ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type ArticlePageSchema } from 'pages/ArticlesPage'
 import { type SaveScrollSchema } from 'features/ScrollSave'
@@ -25,7 +25,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
-  articleDetailsComments?: ArticleDetailsCommentsSchema
+  articleDetailsPage?: ArticleDetailsPageSchema
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlePageSchema
 }

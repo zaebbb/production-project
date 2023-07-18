@@ -3,11 +3,11 @@ import { type StateSchema } from 'app/providers/StoreProvider'
 
 export const getArticleComments =
   commentAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsComments || commentAdapter.getInitialState()
+    (state) => state.articleDetailsPage?.comments || commentAdapter.getInitialState()
   )
 
 export const getArticleDetailsCommentIsLoading =
-  (state: StateSchema) => state.articleDetailsComments?.isLoading
+  (state: StateSchema) => state.articleDetailsPage?.comments?.isLoading
 
 export const getArticleDetailsCommentError =
-  (state: StateSchema) => state.articleDetailsComments?.error
+  (state: StateSchema) => state.articleDetailsPage?.comments?.error

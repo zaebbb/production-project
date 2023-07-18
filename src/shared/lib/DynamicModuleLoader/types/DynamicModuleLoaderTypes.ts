@@ -1,9 +1,9 @@
-import { type StateSchemaKey } from 'app/providers/StoreProvider'
+import { type StateSchema, type StateSchemaKey } from 'app/providers/StoreProvider'
 import { type Reducer } from '@reduxjs/toolkit'
 import type React from 'react'
 
 export type ReducerList = {
-  [name in StateSchemaKey]?: Reducer
+  [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>
 }
 
 export type ReducerEntry = [StateSchemaKey, Reducer]

@@ -23,3 +23,20 @@ body {
 #webpack-dev-server-client-overlay {
   display: none;
 }
+
+* {
+  scrollbar-color: #999 #333;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--card-bg);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--inverted-bg-color);
+}
