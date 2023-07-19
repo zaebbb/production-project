@@ -1,4 +1,6 @@
 {
   "login-account": "Login",
-  "btn-logout": "Logout"
+  "btn-logout": "Logout",
+  "create-article": "Create article",
+  "logo-text": "DEV-PROGER"
 }
