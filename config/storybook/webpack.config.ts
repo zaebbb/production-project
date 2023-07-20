@@ -11,6 +11,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
     entry: '',
     build: '',
     html: '',
+    locales: '',
+    buildLocales: '',
     src: path.resolve(__dirname, '..', '..', 'src'),
   }
 
