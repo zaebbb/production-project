@@ -2,7 +2,7 @@ import { TestAsyncThunk } from 'shared/lib/tests/TestAsync/TestAsyncThunk'
 import { updateProfileData } from './updateProfileData'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import { ValidateProfileError } from 'entities/Profile'
+import { ValidateProfileError } from '../../types/profile'
 
 const data = {
   id: '1',

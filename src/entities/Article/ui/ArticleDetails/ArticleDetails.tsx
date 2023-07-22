@@ -3,15 +3,15 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import cls from './ArticleDetails.module.scss'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
+import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsLoading,
-} from 'entities/Article/model/selectors/articleDetails'
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
+} from '../../model/selectors/articleDetails'
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text'
 import { type ArticleBlock, ArticleBlockType } from '../../model/types/article'

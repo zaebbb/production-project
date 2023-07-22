@@ -3,7 +3,7 @@ import { articlePageAdapter } from '../adapter/articlePageAdapter'
 import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
 import { LOCAL_STORAGE_ARTICLE_VIEW } from '../types/articlePage'
 import { fetchArticles } from '../services/fetchArticles/fetchArticles'
-import { type ArticlePageSchema } from 'pages/ArticlesPage'
+import { type ArticlePageSchema } from '../types/articlePageSchema'
 import { type SortOrder } from 'shared/types'
 
 const articlesPageSlice = createSlice({
