@@ -11,6 +11,7 @@
 .SMALL {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 
   .card {
     gap: 30px;
