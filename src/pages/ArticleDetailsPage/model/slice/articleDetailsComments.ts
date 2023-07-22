@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { type ArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
 import { type Comment } from 'entities/Comment'
 import { commentAdapter } from '../adapters/commentAdapter/commentAdapter'
 import {

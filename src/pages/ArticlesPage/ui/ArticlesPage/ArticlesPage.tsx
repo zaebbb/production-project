@@ -21,7 +21,7 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ArticlePageMounted } from '../../model/services/articlePageMounted/articlePageMounted'
 import { useSearchParams } from 'react-router-dom'
-import { ArticlePageFilter } from 'pages/ArticlesPage/ui/ArticlePageFilter/ArticlePageFilter'
+import { ArticlePageFilter } from '../ArticlePageFilter/ArticlePageFilter'
 
 interface ArticlesPageProps {
   className?: string
