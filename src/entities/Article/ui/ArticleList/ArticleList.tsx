@@ -6,6 +6,7 @@ import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skel
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { useTranslation } from 'react-i18next'
 import { Text } from 'shared/ui/Text/Text'
+import { Virtuoso } from 'react-virtuoso'
 
 interface ArticleListProps {
   className?: string
@@ -37,17 +38,42 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
   } = props
   const { t } = useTranslation('article')
 
-  const renderArticle = (article: Article) => {
-    return (
-      <ArticleListItem
-        className={cls.card}
-        key={article.id}
-        article={article}
-        view={view}
-        target={target}
-      />
-    )
-  }
+  const renderVirtuosoComponent = React.useCallback(() => {
+    if (view === ArticleView.SMALL) {
+      return (
+        <Virtuoso
+          style={{ height: '650px', width: '100%' }}
+          totalCount={articles.length}
+          itemContent={index => (
+            <ArticleListItem
+              className={cls.card}
+              key={articles[index].id}
+              article={articles[index]}
+              view={view}
+              target={target}
+            />
+          )}
+
+        />
+      )
+    } else {
+      return (
+        <Virtuoso
+          style={{ height: '650px' }}
+          totalCount={articles.length}
+          itemContent={index => (
+            <ArticleListItem
+              className={cls.card}
+              key={articles[index].id}
+              article={articles[index]}
+              view={view}
+              target={target}
+            />
+          )}
+        />
+      )
+    }
+  }, [articles, target, view])
 
   if (!isLoading && !articles.length) {
     return (
@@ -59,11 +85,14 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {
-        articles.length ? (
-          articles.map(renderArticle)
-        ) : null
-      }
+      {articles.length ? (
+        renderVirtuosoComponent()
+      ) : null }
+      {/* { */}
+      {/*  articles.length ? ( */}
+      {/*    articles.map(renderArticle) */}
+      {/*  ) : null */}
+      {/* } */}
       {
         isLoading && getSkeleton(view)
       }
