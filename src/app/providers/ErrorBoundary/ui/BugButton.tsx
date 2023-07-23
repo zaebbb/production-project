@@ -17,7 +17,10 @@ export const BugButton: React.FC = () => {
 
   return (
     <Button onClick={toggleError}>
-      Error
+      {
+        // eslint-disable-next-line i18next/no-literal-string
+        'Error'
+      }
     </Button>
   )
 }

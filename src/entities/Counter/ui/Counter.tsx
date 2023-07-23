@@ -27,13 +27,19 @@ export const Counter: React.FC = () => {
         data-testid={'increment'}
         onClick={increment}
       >
-        Increment
+        {
+          // eslint-disable-next-line i18next/no-literal-string
+          'Increment'
+        }
       </Button>
       <Button
         data-testid={'decrement'}
         onClick={decrement}
       >
-        Decrement
+        {
+          // eslint-disable-next-line i18next/no-literal-string
+          'Decrement'
+        }
       </Button>
     </div>
   )
