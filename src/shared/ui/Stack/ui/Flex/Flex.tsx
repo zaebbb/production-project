@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { type Additional, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Flex.module.scss'
 
@@ -21,7 +21,9 @@ export type FlexDirection =
 export type FlexGap =
   4 | 8 | 16 | 32 | 64
 
-export interface FlexProps {
+type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+
+export interface FlexProps extends DivProps {
   className?: string
   children: React.ReactNode
   justify?: FlexJustify
@@ -31,7 +33,7 @@ export interface FlexProps {
   gap?: FlexGap
 }
 
-export const Flex: React.FC<FlexProps> = memo((props: FlexProps) => {
+export const Flex: React.FC<FlexProps> = (props: FlexProps) => {
   const {
     className,
     children,
@@ -56,4 +58,4 @@ export const Flex: React.FC<FlexProps> = memo((props: FlexProps) => {
       {children}
     </div>
   )
-})
+}
