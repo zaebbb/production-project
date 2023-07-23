@@ -13,6 +13,7 @@ import {
   updateProfileData,
 } from 'entities/Profile'
 import { getUserAuthData } from 'entities/User'
+import { HStack } from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string
@@ -41,14 +42,17 @@ export const ProfilePageHeader: React.FC<ProfilePageHeaderProps> = (props) => {
   }, [dispatch])
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack
+      align={'center'}
+      justify={'space-between'}
+      className={classNames(cls.ProfilePageHeader, {}, [className])}
+    >
       <Text title={t('profile')} />
       {canEdit && (
-        <>
+        <HStack gap={16}>
           {readonly ? (
             <Button
               theme={ThemeButton.OUTLINE}
-              className={cls['edit-btn']}
               onClick={onEdit}
             >
               {t('profile-edit')}
@@ -57,22 +61,20 @@ export const ProfilePageHeader: React.FC<ProfilePageHeaderProps> = (props) => {
             <>
               <Button
                 theme={ThemeButton.OUTLINE}
-                className={cls['edit-btn']}
                 onClick={onCancelEdit}
               >
                 {t('profile-escape')}
               </Button>
               <Button
                 theme={ThemeButton.OUTLINE}
-                className={cls['save-btn']}
                 onClick={onSave}
               >
                 {t('profile-save')}
               </Button>
             </>
           )}
-        </>
+        </HStack>
       )}
-    </div>
+    </HStack>
   )
 }
