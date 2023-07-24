@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { Country } from '../../model/types/country'
-import { Select } from 'shared/ui/Select/Select'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 
 interface CountrySelectProps {
   className?: string
@@ -30,13 +30,14 @@ export const CountrySelect: React.FC<CountrySelectProps> = memo((props: CountryS
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       className={className}
       label={label}
       value={value}
       readonly={readonly}
       onChange={onChangeHandler}
       options={options}
+      direction={'top'}
     />
   )
 })
