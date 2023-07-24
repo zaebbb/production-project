@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { Currency } from '../../model/types/currency'
-import { Select } from 'shared/ui/Select/Select'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 
 interface CurrencySelectProps {
   className?: string
@@ -30,13 +30,14 @@ export const CurrencySelect: React.FC<CurrencySelectProps> = memo((props: Curren
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       className={className}
       label={label}
       value={value}
       readonly={readonly}
       onChange={onChangeHandler}
       options={options}
+      direction={'top'}
     />
   )
 })
