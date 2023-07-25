@@ -4,14 +4,13 @@ import cls from './ListBox.module.scss'
 import { Listbox as HListBox } from '@headlessui/react'
 import { HStack } from '../Stack'
 import { Button, ThemeButton } from '../Button/Button'
+import { type DirectionType } from 'shared/types/ui'
 
 export interface ListBoxItem {
   value: string
   content: React.ReactNode
   disabled?: boolean
 }
-
-type DropDownDirection = 'top' | 'bottom'
 
 interface ListBoxProps {
   className?: string
@@ -20,7 +19,7 @@ interface ListBoxProps {
   onChange: <T extends string>(value: T) => void
   readonly?: boolean
   label?: string
-  direction?: DropDownDirection
+  direction?: DirectionType
 }
 
 export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
@@ -31,7 +30,7 @@ export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
     onChange,
     readonly,
     label,
-    direction = 'bottom',
+    direction = 'bottom-left',
   } = props
 
   const additional: Additional = [

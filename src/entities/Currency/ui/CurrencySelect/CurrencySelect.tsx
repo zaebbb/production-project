@@ -37,7 +37,7 @@ export const CurrencySelect: React.FC<CurrencySelectProps> = memo((props: Curren
       readonly={readonly}
       onChange={onChangeHandler}
       options={options}
-      direction={'top'}
+      direction={'top-left'}
     />
   )
 })
