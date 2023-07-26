@@ -2,5 +2,6 @@
   "login-account": "Login",
   "btn-logout": "Logout",
   "create-article": "Create article",
-  "logo-text": "DEV-PROGER"
+  "logo-text": "DEV-PROGER",
+  "nav-profile": "Profile"
 }

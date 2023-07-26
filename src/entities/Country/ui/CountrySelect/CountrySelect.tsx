@@ -37,7 +37,7 @@ export const CountrySelect: React.FC<CountrySelectProps> = memo((props: CountryS
       readonly={readonly}
       onChange={onChangeHandler}
       options={options}
-      direction={'top'}
+      direction={'top-left'}
     />
   )
 })
