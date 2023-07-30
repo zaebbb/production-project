@@ -1,12 +1,12 @@
 import React, { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ArticleList.module.scss'
-import { type Article, ArticleView } from '../../model/types/article'
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton'
-import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { useTranslation } from 'react-i18next'
 import { Text } from 'shared/ui/Text/Text'
 import { Virtuoso } from 'react-virtuoso'
+import { type Article, ArticleView } from '../../model/types/article'
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton'
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
+import cls from './ArticleList.module.scss'
 
 interface ArticleListProps {
   className?: string

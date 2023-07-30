@@ -6,6 +6,9 @@ void i18n
   .init({
     lng: 'ru',
     fallbackLng: 'ru',
+    react: {
+      useSuspense: false,
+    },
 
     debug: false,
 

@@ -1,5 +1,5 @@
-import { Code } from './Code'
 import { type ComponentMeta, type ComponentStory } from '@storybook/react'
+import { Code } from './Code'
 
 export default {
   title: 'shared/Code',

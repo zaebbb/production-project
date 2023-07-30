@@ -1,5 +1,5 @@
-import { loginReducer, loginActions } from './loginSlice'
 import { type LoginSchema } from '../types/loginSchema'
+import { loginReducer, loginActions } from './loginSlice'
 
 describe('Тест loginSlice.test', () => {
   test(

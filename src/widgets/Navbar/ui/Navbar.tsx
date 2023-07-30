@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './Navbar.module.scss'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { LoginModal } from 'features/AuthByUsername'
@@ -12,6 +11,7 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { HStack } from 'shared/ui/Stack'
 import { Menu } from 'shared/ui/Menu/Menu'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
   className?: string

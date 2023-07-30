@@ -1,12 +1,12 @@
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { type Article } from 'entities/Article'
 import {
   recommendationsAdapter,
 } from '../adapters/recommendationsAdapter/recommendationsAdapter'
-import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import {
   type ArticleDetailsRecommendationsSchema,
 } from '../types/articleDetailsRecommendationsSchema'
 import { fetchRecommendations } from '../services/fetchRecommendations/fetchRecommendations'
-import { type Article } from 'entities/Article'
 
 const articleDetailsRecommendationsSlice = createSlice({
   name: 'articleDetailsRecommendationsSlice',

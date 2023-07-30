@@ -1,10 +1,10 @@
 import React, { Fragment, memo } from 'react'
 import { type Additional, classNames } from 'shared/lib/classNames/classNames'
-import cls from './ListBox.module.scss'
 import { Listbox as HListBox } from '@headlessui/react'
+import { type DirectionType } from 'shared/types/ui'
 import { HStack } from '../Stack'
 import { Button, ThemeButton } from '../Button/Button'
-import { type DirectionType } from 'shared/types/ui'
+import cls from './ListBox.module.scss'
 
 export interface ListBoxItem {
   value: string

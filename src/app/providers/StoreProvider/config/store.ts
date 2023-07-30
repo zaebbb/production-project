@@ -1,4 +1,3 @@
-import { type StateSchema } from './StateSchema'
 import {
   type CombinedState,
   configureStore,
@@ -8,8 +7,10 @@ import {
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager'
-import { $api } from 'shared/api/app'
+import { $api } from 'shared/api/api'
 import { saveScrollReducer } from 'features/ScrollSave'
+import { rtkApi } from 'shared/api/rtkApi'
+import { type StateSchema } from './StateSchema'
 
 export function createReduxStore (
   initialState?: StateSchema,
@@ -20,6 +21,7 @@ export function createReduxStore (
     counter: counterReducer,
     user: userReducer,
     saveScroll: saveScrollReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer,
   }
 
   const reducerManager = createReducerManager(rootReducers)
@@ -34,7 +36,7 @@ export function createReduxStore (
           api: $api,
         },
       },
-    }),
+    }).concat(rtkApi.middleware),
   })
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
