@@ -1,10 +1,10 @@
 import React, { Fragment, memo } from 'react'
-import { type Additional, classNames } from '../../lib/classNames/classNames'
-import cls from './Menu.module.scss'
 import { type DirectionType } from 'shared/types/ui'
 import { Menu as HMenu } from '@headlessui/react'
+import { type Additional, classNames } from '../../lib/classNames/classNames'
 import { Button } from '../Button/Button'
 import { AppLink } from '../AppLink/AppLink'
+import cls from './Menu.module.scss'
 
 export interface MenuItem {
   content: React.ReactNode

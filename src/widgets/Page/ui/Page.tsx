@@ -1,6 +1,5 @@
 import React, { memo, type MutableRefObject, type UIEvent } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './Page.module.scss'
 import { useInfinityScroll } from 'shared/lib/hooks/useInfinityScroll/useInfinityScroll'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -9,6 +8,7 @@ import { useSelector } from 'react-redux'
 import { type StateSchema } from 'app/providers/StoreProvider'
 import { getSaveScrollPath, saveScrollActions } from 'features/ScrollSave'
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle'
+import cls from './Page.module.scss'
 
 interface PageProps {
   className?: string

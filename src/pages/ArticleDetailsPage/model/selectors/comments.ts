@@ -1,5 +1,5 @@
-import { commentAdapter } from '../adapters/commentAdapter/commentAdapter'
 import { type StateSchema } from 'app/providers/StoreProvider'
+import { commentAdapter } from '../adapters/commentAdapter/commentAdapter'
 
 export const getArticleComments =
   commentAdapter.getSelectors<StateSchema>(

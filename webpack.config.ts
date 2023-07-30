@@ -1,10 +1,10 @@
+import path from 'path'
+import type webpack from 'webpack'
 import {
   type BuildEnv,
   type BuildMode,
   type BuildPaths,
 } from './config/build/types/config'
-import path from 'path'
-import type webpack from 'webpack'
 import { buildWebpackConfig } from './config/build/buildWebpackConfig'
 
 export default (env: BuildEnv): webpack.Configuration => {

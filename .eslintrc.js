@@ -1,10 +1,12 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true,
+  env: {
+    browser: true,
+    es2021: true,
     jest: true
   },
-  "extends": [
+  extends: [
+    "eslint:recommended",
+    "plugin:import/recommended",
     "plugin:react/recommended",
     "standard-with-typescript",
     "plugin:i18next/recommended",
@@ -19,7 +21,8 @@ module.exports = {
     "react",
     "i18next",
     "react-hooks",
-    "dev-proger-eslint-plugin"
+    "dev-proger-eslint-plugin",
+    'import'
   ],
   "rules": {
     // отступы 2 пробела
@@ -98,7 +101,17 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": ['warn'],
     "@typescript-eslint/no-non-null-assertion": ['warn'],
     "multiline-ternary": ['off'],
-    "dev-proger-eslint-plugin/path-checker-fsd": 'error'
+    "dev-proger-eslint-plugin/path-checker-fsd": 'error',
+    "import/no-duplicates": "off",
+    "import/prefer-default-export": 0,
+    "no-duplicate-imports": "off",
+    "@typescript-eslint/no-duplicate-imports": ["error"],
+    "import/no-unresolved": 'off',
+    "import/named": 'off',
+    "import/namespace": 'off',
+    "import/order": ['error'],
+    "import/default": 'off',
+    "import/export": 2,
   },
   globals: {
     '__IS_DEV__': true,
@@ -112,5 +125,15 @@ module.exports = {
         'i18next/no-literal-string': 'off',
       }
     }
-  ]
+  ],
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 };

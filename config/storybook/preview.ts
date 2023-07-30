@@ -1,3 +1,5 @@
+import { Theme } from 'app/providers/ThemeProvider'
+import { addDecorator } from '@storybook/react'
 import {
   BrowserRouterDecorator,
 } from '../../src/shared/config/storybook/BrowserRouterDecorator/BrowserRouterDecorator'
@@ -7,8 +9,6 @@ import {
 import {
   ThemeDecorator,
 } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
-import { addDecorator } from '@storybook/react'
 
 const preview = {
   parameters: {
