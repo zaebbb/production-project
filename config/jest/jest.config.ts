@@ -99,6 +99,18 @@ export default {
     'node',
   ],
 
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      publicPath: '<rootDir>/reports/unit',
+      filename: 'report.html',
+      openReport: true,
+      expand: true,
+      inlineSource: true,
+      darkTheme: true,
+    }],
+  ],
+
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   // moduleNameMapper: {},
 
