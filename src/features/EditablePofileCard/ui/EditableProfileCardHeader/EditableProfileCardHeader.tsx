@@ -53,6 +53,7 @@ export const EditableProfileCardHeader: React.FC<EditableProfileCardHeaderProps>
               <Button
                 theme={ThemeButton.OUTLINE}
                 onClick={onEdit}
+                data-testid={'editable-profile-card-header-edit-button'}
               >
                 {t('profile-edit')}
               </Button>
@@ -61,12 +62,14 @@ export const EditableProfileCardHeader: React.FC<EditableProfileCardHeaderProps>
                 <Button
                   theme={ThemeButton.OUTLINE}
                   onClick={onCancelEdit}
+                  data-testid={'editable-profile-card-header-cancel-edit'}
                 >
                   {t('profile-escape')}
                 </Button>
                 <Button
                   theme={ThemeButton.OUTLINE}
                   onClick={onSave}
+                  data-testid={'editable-profile-card-header-edit-save'}
                 >
                   {t('profile-save')}
                 </Button>

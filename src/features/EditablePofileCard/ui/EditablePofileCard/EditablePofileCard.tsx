@@ -9,6 +9,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { ProfileCard } from 'entities/Profile'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
@@ -112,12 +113,18 @@ export const EditablePofileCard = memo((props: EditablePofileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.EditablePofileCard, {}, [className])}>
+      <EditableProfileCardHeader />
+
+      <div
+        className={classNames(cls.EditablePofileCard, {}, [className])}
+        data-testid={'editable-profile-card'}
+      >
         {validate?.length && validate.map(err => (
           <Text
             key={err}
             text={validateErrorTranslates[err]}
             theme={TextTheme.ERROR}
+            data-testid={'editable-profile-card-error'}
           />
         ))}
 
