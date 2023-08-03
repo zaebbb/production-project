@@ -6,5 +6,9 @@
   "input-login": "Введите логин",
   "btn-auth": "Авторизоваться",
   "modal-auth-title": "Авторизация",
-  "error-auth": "Неверный логин или пароль"
+  "error-auth": "Неверный логин или пароль",
+  "to-main-page": "to-main-page",
+  "access-denied": "access-denied",
+  "admin-page": "admin-page",
+  "nav-admin": "nav-admin"
 }

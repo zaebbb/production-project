@@ -6,5 +6,9 @@
   "input-login": "Enter Login",
   "btn-auth": "Authorization",
   "modal-auth-title": "Authorization",
-  "error-auth": "Incorrect Login Or Password"
+  "error-auth": "Incorrect Login Or Password",
+  "to-main-page": "to-main-page",
+  "access-denied": "access-denied",
+  "admin-page": "admin-page",
+  "nav-admin": "nav-admin"
 }
