@@ -4,7 +4,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserAuthData, userActions } from 'entities/User'
+import { getUserAuthData, isAdmin, isManager, userActions } from 'entities/User'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
@@ -27,6 +27,9 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = React.useState<boolean>(false)
   const authData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
+  const isAccessAdmin = useSelector(isAdmin)
+  const isAccessManager = useSelector(isManager)
+  const isAdminPanel = isAccessAdmin || isAccessManager
 
   const onCloseModal = React.useCallback(() => {
     setIsAuthModal(false)
@@ -54,6 +57,10 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
           </AppLink>
           <Menu
             items={[
+              ...(isAdminPanel ? [{
+                content: t('nav-admin'),
+                href: RoutePath.admin_panel,
+              }] : []),
               {
                 content: t('nav-profile'),
                 href: RoutePath.profile + authData.id,

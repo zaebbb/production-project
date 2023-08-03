@@ -39,39 +39,41 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
   const { t } = useTranslation('article')
 
   const renderVirtuosoComponent = React.useCallback(() => {
-    if (view === ArticleView.SMALL) {
-      return (
-        <Virtuoso
-          style={{ height: '650px', width: '100%' }}
-          totalCount={articles.length}
-          itemContent={index => (
-            <ArticleListItem
-              className={cls.card}
-              key={articles[index].id}
-              article={articles[index]}
-              view={view}
-              target={target}
-            />
-          )}
+    if (__PROJECT__ !== 'storybook') {
+      if (view === ArticleView.SMALL) {
+        return (
+          <Virtuoso
+            style={{ height: '650px', width: '100%' }}
+            totalCount={articles.length}
+            itemContent={index => (
+              <ArticleListItem
+                className={cls.card}
+                key={articles[index].id}
+                article={articles[index]}
+                view={view}
+                target={target}
+              />
+            )}
 
-        />
-      )
-    } else {
-      return (
-        <Virtuoso
-          style={{ height: '650px' }}
-          totalCount={articles.length}
-          itemContent={index => (
-            <ArticleListItem
-              className={cls.card}
-              key={articles[index].id}
-              article={articles[index]}
-              view={view}
-              target={target}
-            />
-          )}
-        />
-      )
+          />
+        )
+      } else {
+        return (
+          <Virtuoso
+            style={{ height: '650px' }}
+            totalCount={articles.length}
+            itemContent={index => (
+              <ArticleListItem
+                className={cls.card}
+                key={articles[index].id}
+                article={articles[index]}
+                view={view}
+                target={target}
+              />
+            )}
+          />
+        )
+      }
     }
   }, [articles, target, view])
 

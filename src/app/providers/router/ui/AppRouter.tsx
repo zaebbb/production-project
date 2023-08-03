@@ -5,7 +5,14 @@ import { PageLoader } from 'widgets/PageLoader'
 import { RequireAuth } from './RequireAuth'
 
 const AppRouter: React.FC = () => {
-  const renderWithWrapper = React.useCallback(({ path, element, authOnly }: AppRouteProps) => {
+  const renderWithWrapper = React.useCallback((props: AppRouteProps) => {
+    const {
+      path,
+      element,
+      authOnly,
+      roles,
+    } = props
+
     const routeElement = (
       <>
         {element}
@@ -17,7 +24,7 @@ const AppRouter: React.FC = () => {
         key={path}
         path={path}
         element={
-          authOnly ? <RequireAuth>{routeElement}</RequireAuth> : routeElement
+          authOnly ? <RequireAuth roles={roles}>{routeElement}</RequireAuth> : routeElement
         }
       />
     )
