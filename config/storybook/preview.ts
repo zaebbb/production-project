@@ -9,6 +9,9 @@ import {
 import {
   ThemeDecorator,
 } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import {
+  SuspenseDecorator,
+} from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
 
 const preview = {
   parameters: {
@@ -24,6 +27,7 @@ const preview = {
 
 addDecorator(BrowserRouterDecorator)
 addDecorator(StyleDecorator)
+addDecorator(SuspenseDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
 
 export default preview
