@@ -20,7 +20,7 @@ Primary.decorators = [
         title: 'JavaScript',
         subtitle: 'new js 2023',
         // eslint-disable-next-line max-len
-        image: 'https://skr.sh/s/130723/ZFdQxgYX.png?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2014-07-2023%2016:51:29.png',
+        image: 'https://images.unsplash.com/photo-1689509293411-b199bdbf96fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxODY2Nzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTEyMTc3NTl8&ixlib=rb-4.0.3&q=80&w=1080',
         views: 1022,
         createdAt: '26.06.2023',
         type: [],
@@ -59,7 +59,7 @@ Primary.decorators = [
             id: '2',
             type: ArticleBlockType.IMAGE,
             // eslint-disable-next-line max-len
-            src: 'https://skr.sh/s/130723/ZFdQxgYX.png?download=1&name=%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82%2014-07-2023%2016:51:29.png',
+            src: 'https://images.unsplash.com/photo-1689509293411-b199bdbf96fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxODY2Nzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTEyMTc3NTl8&ixlib=rb-4.0.3&q=80&w=1080',
             title: 'Рисунок 1 - скриншот сайта',
           },
           {
