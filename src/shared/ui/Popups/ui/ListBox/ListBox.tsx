@@ -2,8 +2,9 @@ import React, { Fragment, memo } from 'react'
 import { type Additional, classNames } from 'shared/lib/classNames/classNames'
 import { Listbox as HListBox } from '@headlessui/react'
 import { type DirectionType } from 'shared/types/ui'
-import { HStack } from '../Stack'
-import { Button, ThemeButton } from '../Button/Button'
+import { HStack } from '../../../Stack'
+import { Button, ThemeButton } from '../../../Button/Button'
+import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
 
 export interface ListBoxItem {
@@ -34,7 +35,7 @@ export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
   } = props
 
   const additional: Additional = [
-    cls[`direction-${direction}`],
+    popupsCls[`direction-${direction}`],
   ]
 
   return (
@@ -74,8 +75,8 @@ export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
                     classNames(
                       cls.option,
                       {
-                        [cls.active]: active,
-                        [cls.disabled]: option.disabled,
+                        [popupsCls.active]: active,
+                        [popupsCls.disabled]: option.disabled,
                       }
                     )
                   }

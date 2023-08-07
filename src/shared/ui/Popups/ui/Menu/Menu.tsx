@@ -1,9 +1,10 @@
 import React, { Fragment, memo } from 'react'
 import { type DirectionType } from 'shared/types/ui'
 import { Menu as HMenu } from '@headlessui/react'
-import { type Additional, classNames } from '../../lib/classNames/classNames'
-import { Button } from '../Button/Button'
-import { AppLink } from '../AppLink/AppLink'
+import { type Additional, classNames } from '../../../../lib/classNames/classNames'
+import { Button } from '../../../Button/Button'
+import { AppLink } from '../../../AppLink/AppLink'
+import popupsCls from '../../styles/popup.module.scss'
 import cls from './Menu.module.scss'
 
 export interface MenuItem {
@@ -29,7 +30,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
   } = props
 
   const additionalOptions: Additional = [
-    cls[`direction-${direction}`],
+    popupsCls[`direction-${direction}`],
   ]
 
   return (
@@ -51,8 +52,8 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
                   classNames(
                     cls.item,
                     {
-                      [cls.active]: active,
-                      [cls.disabled]: item.disabled,
+                      [popupsCls.active]: active,
+                      [popupsCls.disabled]: item.disabled,
                     }
                   )
                 }

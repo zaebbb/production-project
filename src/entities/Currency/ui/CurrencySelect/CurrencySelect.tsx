@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { ListBox } from 'shared/ui/Popups'
 import { Currency } from '../../model/types/currency'
 
 interface CurrencySelectProps {

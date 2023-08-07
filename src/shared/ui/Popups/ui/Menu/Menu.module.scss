@@ -37,31 +37,3 @@
   border: none;
   outline: none;
 }
-
-.active {
-  background: var(--inverted-primary-color);
-}
-
-.disabled {
-  opacity: 0.5;
-}
-
-.direction-top-right {
-  right: 0;
-  bottom: 100%;
-}
-
-.direction-top-left {
-  bottom: 100%;
-  left: 0;
-}
-
-.direction-bottom-right {
-  top: 100%;
-  right: 0;
-}
-
-.direction-bottom-left {
-  top: 100%;
-  left: 0;
-}
