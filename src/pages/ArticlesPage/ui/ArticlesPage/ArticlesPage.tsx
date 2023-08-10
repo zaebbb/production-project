@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { DynamicModuleLoader, type ReducerList } from 'shared/lib/DynamicModuleLoader'
+import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
 import { Page } from 'widgets/Page'
 import { articlesPageReducer } from '../../model/slice/articlePageSlice'
 import {
