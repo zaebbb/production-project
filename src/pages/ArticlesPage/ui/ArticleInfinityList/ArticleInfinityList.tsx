@@ -1,12 +1,7 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { ArticleList } from 'entities/Article'
-import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useSelector } from 'react-redux'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useSearchParams } from 'react-router-dom'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { ArticlePageMounted } from '../../model/services/articlePageMounted/articlePageMounted'
 import {
   getArticlePageError,
@@ -15,6 +10,11 @@ import {
   getArticles,
 } from '../../model/selectors/articlePageSelectors'
 import cls from './ArticleInfinityList.module.scss'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { ArticleList } from '@/entities/Article'
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleInfinityListProps {
   className?: string

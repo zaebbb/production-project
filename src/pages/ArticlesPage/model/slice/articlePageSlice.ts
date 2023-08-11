@@ -1,10 +1,10 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
-import { type SortOrder } from 'shared/types'
 import { articlePageAdapter } from '../adapter/articlePageAdapter'
 import { LOCAL_STORAGE_ARTICLE_VIEW } from '../types/articlePage'
 import { fetchArticles } from '../services/fetchArticles/fetchArticles'
 import { type ArticlePageSchema } from '../types/articlePageSchema'
+import { type SortOrder } from '@/shared/types'
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article'
 
 const articlesPageSlice = createSlice({
   name: 'articlesPageSlice',

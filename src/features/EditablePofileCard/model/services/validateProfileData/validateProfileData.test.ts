@@ -1,8 +1,8 @@
-import { Currency } from 'entities/Currency'
-import { Country } from 'entities/Country'
-import { type Profile } from 'entities/Profile'
 import { ValidateProfileError } from '../../types/EditablePofileCardSchema'
 import { validateProfileData } from './validateProfileData'
+import { Currency } from '@/entities/Currency'
+import { Country } from '@/entities/Country'
+import { type Profile } from '@/entities/Profile'
 
 const data: Profile = {
   first: '123',

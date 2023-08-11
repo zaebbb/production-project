@@ -136,5 +136,9 @@ module.exports = {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
-  }
+  },
+  ignorePatterns: [
+    '.eslintrc.js',
+    'updateImports.ts'
+  ]
 };

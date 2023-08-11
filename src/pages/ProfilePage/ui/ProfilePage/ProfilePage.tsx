@@ -1,11 +1,11 @@
 import React from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Page } from 'widgets/Page'
-import {
-  EditablePofileCard,
-} from 'features/EditablePofileCard'
 import { useParams } from 'react-router-dom'
 import cls from './ProfilePage.module.scss'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Page } from '@/widgets/Page'
+import {
+  EditablePofileCard,
+} from '@/features/EditablePofileCard'
 
 interface ProfilePageProps {
   className?: string

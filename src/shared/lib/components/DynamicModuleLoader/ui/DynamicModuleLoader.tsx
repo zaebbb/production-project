@@ -1,10 +1,10 @@
 import React from 'react'
 import { useDispatch, useStore } from 'react-redux'
+import { type DynamicModuleLoaderProps } from '../types/DynamicModuleLoaderTypes'
 import {
   type ReduxStoreWithManager,
   type StateSchemaKey,
-} from 'app/providers/StoreProvider'
-import { type DynamicModuleLoaderProps } from '../types/DynamicModuleLoaderTypes'
+} from '@/app/providers/StoreProvider'
 
 export const DynamicModuleLoader: React.FC<DynamicModuleLoaderProps> = (props) => {
   const {
