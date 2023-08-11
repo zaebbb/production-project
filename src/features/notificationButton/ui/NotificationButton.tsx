@@ -7,7 +7,6 @@ import NotificationIcon from '@/shared/assets/icons/norification.svg'
 import { Icon } from '@/widgets/Icon/Icon'
 import { NotificationList } from '@/entities/Notification'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider'
 
 interface NotificationButtonProps {
   className?: string
@@ -48,11 +47,9 @@ export const NotificationButton: React.FC<NotificationButtonProps> =
         </BrowserView>
         <MobileView>
           {trigger}
-          <AnimationProvider>
-            <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-              <NotificationList />
-            </Drawer>
-          </AnimationProvider>
+          <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+            <NotificationList />
+          </Drawer>
         </MobileView>
       </div>
     )
