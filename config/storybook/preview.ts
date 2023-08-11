@@ -1,5 +1,5 @@
-import { Theme } from 'app/providers/ThemeProvider'
 import { addDecorator } from '@storybook/react'
+import { Theme } from '../../src/app/providers/ThemeProvider'
 import {
   BrowserRouterDecorator,
 } from '../../src/shared/config/storybook/BrowserRouterDecorator/BrowserRouterDecorator'

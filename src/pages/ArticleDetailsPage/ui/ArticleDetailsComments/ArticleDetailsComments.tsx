@@ -1,13 +1,6 @@
 import React, { memo, Suspense } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Text, TextSize } from 'shared/ui/Text/Text'
-import { AddCommentForm } from 'features/addCommentForm'
-import { CommentList } from 'entities/Comment'
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Loader } from 'shared/ui/Loader/Loader'
 import {
   getArticleComments,
   getArticleDetailsCommentIsLoading,
@@ -19,6 +12,13 @@ import {
   fetchCommentsArticleById,
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
 import cls from './ArticleDetailsComments.module.scss'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { AddCommentForm } from '@/features/addCommentForm'
+import { CommentList } from '@/entities/Comment'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Loader } from '@/shared/ui/Loader/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string

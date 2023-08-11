@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
-import { ListBox } from 'shared/ui/Popups'
 import { Currency } from '../../model/types/currency'
+import { ListBox } from '@/shared/ui/Popups'
 
 interface CurrencySelectProps {
   className?: string

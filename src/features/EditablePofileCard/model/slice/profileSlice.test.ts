@@ -1,9 +1,9 @@
-import { Currency } from 'entities/Currency'
-import { Country } from 'entities/Country'
-import { type Profile } from 'entities/Profile'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { type ProfileSchema } from '../types/EditablePofileCardSchema'
 import { profileActions, profileReducer } from './profileSlice'
+import { Currency } from '@/entities/Currency'
+import { Country } from '@/entities/Country'
+import { type Profile } from '@/entities/Profile'
 
 const data: Profile = {
   first: '123',

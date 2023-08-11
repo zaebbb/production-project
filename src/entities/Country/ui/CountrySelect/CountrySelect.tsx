@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
-import { ListBox } from 'shared/ui/Popups'
 import { Country } from '../../model/types/country'
+import { ListBox } from '@/shared/ui/Popups'
 
 interface CountrySelectProps {
   className?: string

@@ -1,7 +1,7 @@
-import { type StateSchema } from 'app/providers/StoreProvider'
 import {
   recommendationsAdapter,
 } from '../adapters/recommendationsAdapter/recommendationsAdapter'
+import { type StateSchema } from '@/app/providers/StoreProvider'
 
 export const getArticleRecommendations =
   recommendationsAdapter.getSelectors<StateSchema>(

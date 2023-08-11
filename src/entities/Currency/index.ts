@@ -1,2 +1,2 @@
-export { CurrencySelect } from 'entities/Currency/ui/CurrencySelect/CurrencySelect'
+export { CurrencySelect } from './ui/CurrencySelect/CurrencySelect'
 export { Currency } from './model/types/currency'

@@ -1,6 +1,6 @@
-import { type StateSchema } from 'app/providers/StoreProvider'
-import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
 import { articlePageAdapter } from '../adapter/articlePageAdapter'
+import { type StateSchema } from '@/app/providers/StoreProvider'
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article'
 
 export const getArticlePageIsLoading =
   (state: StateSchema) => state.articlesPage?.isLoading
