@@ -32,6 +32,7 @@
   "btn-logout": "btn-logout",
   "button-article-edit": "button-article-edit",
   "button-back": "button-back",
+  "close-rating-modal": "close-rating-modal",
   "comments-not-found": "comments-not-found",
   "create-article": "create-article",
   "edit-article": "edit-article",
@@ -66,8 +67,10 @@
   "profile-input-username": "profile-input-username",
   "profile-save": "profile-save",
   "reload-page": "reload-page",
+  "send-rating": "send-rating",
   "title": "title",
   "to-main-page": "to-main-page",
   "toggle-sidebar": "toggle-sidebar",
-  "unexpected-error": "unexpected-error"
+  "unexpected-error": "unexpected-error",
+  "your-feedback": "your-feedback"
 }

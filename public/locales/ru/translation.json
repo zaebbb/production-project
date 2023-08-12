@@ -10,5 +10,8 @@
   "to-main-page": "to-main-page",
   "access-denied": "access-denied",
   "admin-page": "admin-page",
-  "nav-admin": "nav-admin"
+  "nav-admin": "nav-admin",
+  "your-feedback": "Ваш отзыв",
+  "close-rating-modal": "Закрыть",
+  "send-rating": "Отправить"
 }
