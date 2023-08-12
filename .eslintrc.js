@@ -139,6 +139,8 @@ module.exports = {
   },
   ignorePatterns: [
     '.eslintrc.js',
+    'vite.config.dev.ts',
+    'vite.config.prod.ts',
     'updateImports.ts'
   ]
 };
