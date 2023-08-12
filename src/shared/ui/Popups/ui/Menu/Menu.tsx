@@ -38,7 +38,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
       as={'div'}
       className={classNames(cls.Menu, {}, [className])}
     >
-      <HMenu.Button className={cls.button}>
+      <HMenu.Button as={'div'} className={cls.button}>
         {trigger}
       </HMenu.Button>
       <HMenu.Items className={classNames(cls.items, {}, additionalOptions)}>

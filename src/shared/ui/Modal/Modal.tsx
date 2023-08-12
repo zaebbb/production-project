@@ -11,7 +11,7 @@ interface ModalProps {
   className?: string
   children?: React.ReactNode
   isOpen?: boolean
-  onClose: () => void
+  onClose?: () => void
   lazy?: boolean
 }
 

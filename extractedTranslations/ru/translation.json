@@ -69,5 +69,8 @@
   "title": "title",
   "to-main-page": "to-main-page",
   "toggle-sidebar": "toggle-sidebar",
-  "unexpected-error": "unexpected-error"
+  "unexpected-error": "unexpected-error",
+  "your-feedback": "your-feedback",
+  "send-rating": "send-rating",
+  "close-rating-modal": "close-rating-modal"
 }
