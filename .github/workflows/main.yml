@@ -22,8 +22,11 @@ jobs:
       - name: Установка зависимостей
         run: npm install
 
-      - name: Продакшен сборка проекта
+      - name: Продакшен сборка проекта webpack
         run: npm run build:prod
+
+      - name: Продакшен сборка проекта vite
+        run: npm run build:prod:vite
 
       - name: Линтер Typescript
         if: always()
