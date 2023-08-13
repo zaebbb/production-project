@@ -4,7 +4,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleBlockType } from '@/entities/Article/model/types/article'
 
 export default {
-  title: 'pages/ArticleDetailsPage',
+  title: 'pages/ArticleDetails/ArticleDetailsPage',
   component: ArticleDetailsPage,
 } satisfies ComponentMeta<typeof ArticleDetailsPage>
 

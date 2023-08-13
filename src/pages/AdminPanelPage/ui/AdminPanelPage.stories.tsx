@@ -3,7 +3,7 @@ import AdminPanelPage from './AdminPanelPage'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 const meta: Meta<typeof AdminPanelPage> = {
-  title: 'CHANGE/AdminPanelPage',
+  title: 'pages/AdminPanelPage',
   component: AdminPanelPage,
 }
 
