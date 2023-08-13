@@ -72,5 +72,8 @@
   "unexpected-error": "unexpected-error",
   "your-feedback": "your-feedback",
   "send-rating": "send-rating",
-  "close-rating-modal": "close-rating-modal"
+  "close-rating-modal": "close-rating-modal",
+  "like-rating": "like-rating",
+  "add-feedback-title": "add-feedback-title",
+  "you-use-like-rating": "you-use-like-rating"
 }

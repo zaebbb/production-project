@@ -21,7 +21,7 @@ export const StarRating: React.FC<StarRatingProps> = memo((props: StarRatingProp
     selectedStars = 0,
   } = props
 
-  const [currentStarCount, setCurrentStarCount] = React.useState(0)
+  const [currentStarCount, setCurrentStarCount] = React.useState(selectedStars)
   const [isSelected, setIsSelected] = React.useState(Boolean(selectedStars))
 
   const onHover = React.useCallback((starCount: number) => () => {

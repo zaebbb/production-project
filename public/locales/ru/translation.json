@@ -13,5 +13,8 @@
   "nav-admin": "nav-admin",
   "your-feedback": "Ваш отзыв",
   "close-rating-modal": "Закрыть",
-  "send-rating": "Отправить"
+  "send-rating": "Отправить",
+  "like-rating": "Оцените статью",
+  "add-feedback-title": "Оставьте отзыв",
+  "you-use-like-rating": "Спасибо за оценку!"
 }
