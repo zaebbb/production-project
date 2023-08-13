@@ -3,7 +3,7 @@ import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 const meta: Meta<typeof ArticleDetailsPageHeader> = {
-  title: 'CHANGE/ArticleDetailsPageHeader',
+  title: 'pages/ArticleDetails/ArticleDetailsPageHeader',
   component: ArticleDetailsPageHeader,
 }
 
