@@ -11,6 +11,7 @@
   "NO_DATA": "NO_DATA",
   "access-denied": "access-denied",
   "add-comment": "add-comment",
+  "add-feedback-title": "add-feedback-title",
   "admin-page": "admin-page",
   "article-comments": "article-comments",
   "article-not-found": "",
@@ -44,6 +45,7 @@
   "input-password": "input-password",
   "input-placeholder": "input-placeholder",
   "language": "language",
+  "like-rating": "like-rating",
   "link-about": "link-about",
   "link-main": "link-main",
   "load-comment": "load-comment",
@@ -72,5 +74,6 @@
   "to-main-page": "to-main-page",
   "toggle-sidebar": "toggle-sidebar",
   "unexpected-error": "unexpected-error",
+  "you-use-like-rating": "you-use-like-rating",
   "your-feedback": "your-feedback"
 }
