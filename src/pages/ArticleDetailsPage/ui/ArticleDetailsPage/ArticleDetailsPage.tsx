@@ -11,7 +11,7 @@ import { ArticleDetails } from '@/entities/Article'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { Page } from '@/widgets/Page'
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList'
-import ArticleRating from '@/features/articleRating/ui/ArticleRating/ArticleRating'
+import { ArticleRating } from '@/features/articleRating'
 import { VStack } from '@/shared/ui/Stack'
 
 interface ArticleDetailsPageProps {
