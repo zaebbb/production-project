@@ -1,15 +1,11 @@
 import { type Story } from '@storybook/react'
 import { type StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
-import { loginReducer } from '@/features/AuthByUsername'
+import { loginReducer } from '@/features/AuthByUsername/itest'
 import { type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-// eslint-disable-next-line dev-proger-eslint-plugin/public-api-imports
-import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice'
-// eslint-disable-next-line dev-proger-eslint-plugin/public-api-imports
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slice/addCommentFormSlice'
-// eslint-disable-next-line dev-proger-eslint-plugin/public-api-imports
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slice'
-// eslint-disable-next-line dev-proger-eslint-plugin/public-api-imports
-import { profileReducer } from '@/features/EditablePofileCard/model/slice/profileSlice'
+import { articleDetailsReducer } from '@/entities/Article/itest'
+import { addCommentFormReducer } from '@/features/addCommentForm/itest'
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/itest'
+import { profileReducer } from '@/features/EditablePofileCard/itest'
 
 const defaultAsyncReducers: ReducerList = {
   loginForm: loginReducer,

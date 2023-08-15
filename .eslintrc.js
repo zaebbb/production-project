@@ -110,7 +110,13 @@ module.exports = {
     "dev-proger-eslint-plugin/public-api-imports": [
       'error',
       {
-        alias: '@'
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.stories.*',
+          '**/StoreDecorator.tsx'
+        ],
+        publicApiFilename: 'itest'
       }
     ],
     "import/no-duplicates": "off",
