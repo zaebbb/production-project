@@ -107,6 +107,12 @@ module.exports = {
         alias: '@'
       }
     ],
+    "dev-proger-eslint-plugin/public-api-imports": [
+      'error',
+      {
+        alias: '@'
+      }
+    ],
     "import/no-duplicates": "off",
     "import/prefer-default-export": 0,
     "no-duplicate-imports": "off",

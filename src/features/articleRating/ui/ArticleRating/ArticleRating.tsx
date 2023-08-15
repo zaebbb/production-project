@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useAddArticleRating, useGetArticleRating } from '../../api/articleRatingApi'
 import { getUserAuthData } from '@/entities/User'
-import { RatingCard } from '@/entities/Rating/ui/RatingCard/RatingCard'
+import { RatingCard } from '@/entities/Rating'
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
 
 export interface ArticleRatingProps {

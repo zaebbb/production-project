@@ -11,4 +11,5 @@ export {
   ArticleType,
 } from './model/types/article'
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
+export { ArticleBlockType } from './model/types/article'
 export { getArticleDetailsData } from './model/selectors/articleDetails'
