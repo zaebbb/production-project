@@ -9,7 +9,6 @@ import {
 } from '../../model/types/article'
 import cls from './ArticleListItem.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Text } from '@/shared/ui/Text/Text'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { Icon } from '@/widgets/Icon'
@@ -17,6 +16,7 @@ import { Card } from '@/widgets/Card'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
+import { RoutePath } from '@/shared/const'
 
 interface ArticleListItemProps {
   className?: string

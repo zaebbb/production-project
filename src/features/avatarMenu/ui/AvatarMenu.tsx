@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Menu } from '@/shared/ui/Popups'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { RoutePath } from '@/shared/const'
 
 interface AvatarMenuProps {
   className?: string
