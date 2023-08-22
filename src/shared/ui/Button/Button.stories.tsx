@@ -1,7 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Button, SizeButton, ThemeButton } from './Button'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/app/providers/ThemeProvider'
 
 const meta: ComponentMeta<typeof Button> = {
   title: 'shared/Button',

@@ -1,8 +1,8 @@
 import React, { memo, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { routeConfig } from '../config/routeConfig'
 import { RequireAuth } from './RequireAuth'
 import { PageLoader } from '@/widgets/PageLoader'
-import { routeConfig } from '@/app/providers/router/config/routeConfig'
 import { type AppRouteProps } from '@/shared/types/router'
 
 const AppRouter: React.FC = () => {
