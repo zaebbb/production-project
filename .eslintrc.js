@@ -119,6 +119,13 @@ module.exports = {
         publicApiFilename: 'itest'
       }
     ],
+    "dev-proger-eslint-plugin/layer-imports": ['error', {
+      alias: '@',
+      ignoreImportPatterns: [
+        '**/StoreProvider',
+        '**/itest',
+      ]
+    }],
     "import/no-duplicates": "off",
     "import/prefer-default-export": 0,
     "no-duplicate-imports": "off",
@@ -158,6 +165,7 @@ module.exports = {
     '.eslintrc.js',
     'vite.config.dev.ts',
     'vite.config.prod.ts',
-    'updateImports.ts'
+    'updateImports.ts',
+    'preview.ts'
   ]
 };

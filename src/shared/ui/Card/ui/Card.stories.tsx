@@ -1,6 +1,5 @@
 import type { ComponentStory, Meta } from '@storybook/react'
 import { Card } from './Card'
-import { Theme } from '@/app/providers/ThemeProvider'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 
 const meta: Meta<typeof Card> = {
