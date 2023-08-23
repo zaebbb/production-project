@@ -7,8 +7,8 @@ import {
   getArticlePageSort,
   getArticlePageType,
 } from '../../selectors/articlePageSelectors'
-import { type Article, ArticleType } from '@/entities/Article'
 import { type ThunkConfig } from '@/app/providers/StoreProvider'
+import { type Article, ArticleType } from '@/entities/Article'
 import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams'
 
 interface FetchArticlesProps {

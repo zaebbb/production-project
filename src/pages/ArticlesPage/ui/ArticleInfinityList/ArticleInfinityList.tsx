@@ -2,19 +2,19 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import { ArticlePageMounted } from '../../model/services/articlePageMounted/articlePageMounted'
 import {
   getArticlePageError,
   getArticlePageIsLoading,
   getArticlePageView,
   getArticles,
 } from '../../model/selectors/articlePageSelectors'
+import { ArticlePageMounted } from '../../model/services/articlePageMounted/articlePageMounted'
 import cls from './ArticleInfinityList.module.scss'
+import { ArticleList } from '@/entities/Article'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Text, TextTheme } from '@/shared/ui/Text'
-import { ArticleList } from '@/entities/Article'
-import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleInfinityListProps {
   className?: string

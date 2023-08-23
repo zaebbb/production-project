@@ -1,26 +1,26 @@
-import { useTranslation } from 'react-i18next'
 import React, { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
+import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
-import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import {
   getProfileValidateErrors,
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 import { ValidateProfileError } from '../../model/types/EditablePofileCardSchema'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import cls from './EditablePofileCard.module.scss'
-import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { ProfileCard } from '@/entities/Profile'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
+import { ProfileCard } from '@/entities/Profile'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Text, TextTheme } from '@/shared/ui/Text'
-import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface EditablePofileCardProps {
   className?: string

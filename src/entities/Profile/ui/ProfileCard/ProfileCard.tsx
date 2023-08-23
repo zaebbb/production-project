@@ -2,14 +2,14 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { type Profile } from '../../model/types/profile'
 import cls from './ProfileCard.module.scss'
-import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
-import { Input } from '@/shared/ui/Input'
 import { type Country, CountrySelect } from '@/entities/Country'
 import { type Currency, CurrencySelect } from '@/entities/Currency'
-import { Loader } from '@/shared/ui/Loader'
-import { Text, TextTheme } from '@/shared/ui/Text'
+import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 import { Avatar } from '@/shared/ui/Avatar'
+import { Input } from '@/shared/ui/Input'
+import { Loader } from '@/shared/ui/Loader'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { Text, TextTheme } from '@/shared/ui/Text'
 
 interface ProfileCardProps {
   className?: string

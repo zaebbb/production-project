@@ -1,8 +1,6 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { fetchArticles } from '../../model/services/fetchArticles/fetchArticles'
-import { articlesPageActions } from '../../model/slice/articlePageSlice'
 import {
   getArticlePageOrder,
   getArticlePageSearch,
@@ -10,10 +8,9 @@ import {
   getArticlePageType,
   getArticlePageView,
 } from '../../model/selectors/articlePageSelectors'
+import { fetchArticles } from '../../model/services/fetchArticles/fetchArticles'
+import { articlesPageActions } from '../../model/slice/articlePageSlice'
 import cls from './ArticlePageFilter.module.scss'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
 import {
   type ArticleSortField,
   ArticleSortSelector,
@@ -22,8 +19,11 @@ import {
   type ArticleView,
 } from '@/entities/Article'
 import { ArticleViewSelector } from '@/features/ArticleViewSelector'
-import { Input } from '@/shared/ui/Input'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
 import { type SortOrder } from '@/shared/types'
+import { Input } from '@/shared/ui/Input'
 import { type TabItem } from '@/shared/ui/Tabs'
 
 interface ArticlePageFilterProps {

@@ -1,8 +1,8 @@
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { type ProfileSchema } from '../types/EditablePofileCardSchema'
 import { profileActions, profileReducer } from './profileSlice'
-import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
 import { type Profile } from '@/entities/Profile'
 
 const data: Profile = {

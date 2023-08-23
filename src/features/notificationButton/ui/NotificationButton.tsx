@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import cls from './NotificationButton.module.scss'
-import { Button, ThemeButton } from '@/shared/ui/Button'
-import NotificationIcon from '@/shared/assets/icons/norification.svg'
-import { Icon } from '@/shared/ui/Icon'
 import { NotificationList } from '@/entities/Notification'
+import NotificationIcon from '@/shared/assets/icons/norification.svg'
+import { Button, ThemeButton } from '@/shared/ui/Button'
 import { Drawer } from '@/shared/ui/Drawer'
+import { Icon } from '@/shared/ui/Icon'
 import { Popover } from '@/shared/ui/Popups/ui/Popover/Popover'
 
 interface NotificationButtonProps {

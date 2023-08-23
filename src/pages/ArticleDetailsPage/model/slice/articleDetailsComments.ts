@@ -1,9 +1,9 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import { type ArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
 import { commentAdapter } from '../adapters/commentAdapter/commentAdapter'
 import {
   fetchCommentsArticleById,
 } from '../services/fetchCommentsArticleById/fetchCommentsArticleById'
+import { type ArticleDetailsCommentsSchema } from '../types/articleDetailsCommentsSchema'
 import { type Comment } from '@/entities/Comment'
 
 const articleDetailsCommentsSlice = createSlice({
