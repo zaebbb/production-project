@@ -10,9 +10,9 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 import cls from './LoginForm.module.scss'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
-import { Button, ThemeButton } from '@/shared/ui/Button/Button'
-import { Input } from '@/shared/ui/Input/Input'
+import { Text, TextTheme } from '@/shared/ui/Text'
+import { Button, ThemeButton } from '@/shared/ui/Button'
+import { Input } from '@/shared/ui/Input'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 export interface LoginFormProps {

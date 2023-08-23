@@ -5,7 +5,7 @@ import { type SidebarItemType } from '../../model/types/sidebar'
 import cls from './SidebarItem.module.scss'
 import { getUserAuthData } from '@/entities/User'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 
 interface SidebarItemProps {
   item: SidebarItemType

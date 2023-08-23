@@ -6,7 +6,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
 import cls from './ArticleDetailsPage.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { ArticleDetails } from '@/entities/Article'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { Page } from '@/widgets/Page'

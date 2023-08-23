@@ -1,7 +1,7 @@
 import React from 'react'
 import { LoginFormAsync } from '../LoginForm/LoginForm.async'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Modal } from '@/shared/ui/Modal/Modal'
+import { Modal } from '@/shared/ui/Modal'
 
 interface LoginModalProps {
   className?: string

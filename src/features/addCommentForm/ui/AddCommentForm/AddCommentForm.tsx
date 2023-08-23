@@ -10,8 +10,8 @@ import cls from './AddCommentForm.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Input } from '@/shared/ui/Input/Input'
-import { Button, ThemeButton } from '@/shared/ui/Button/Button'
+import { Input } from '@/shared/ui/Input'
+import { Button, ThemeButton } from '@/shared/ui/Button'
 
 interface AddCommentFormProps {
   className?: string

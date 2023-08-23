@@ -19,7 +19,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface EditablePofileCardProps {

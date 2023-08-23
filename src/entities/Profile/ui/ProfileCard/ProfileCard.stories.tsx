@@ -5,6 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
+import { Theme } from '@/shared/const'
 
 export default {
   title: 'entities/ProfileCard',
