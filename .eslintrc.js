@@ -166,6 +166,7 @@ module.exports = {
     'vite.config.dev.ts',
     'vite.config.prod.ts',
     'updateImports.ts',
-    'preview.ts'
+    'preview.ts',
+    'createPublicApiForSharedUI.ts'
   ]
 };

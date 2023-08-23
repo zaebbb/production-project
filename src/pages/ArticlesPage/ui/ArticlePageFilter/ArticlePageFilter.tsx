@@ -22,9 +22,9 @@ import {
   type ArticleView,
 } from '@/entities/Article'
 import { ArticleViewSelector } from '@/features/ArticleViewSelector'
-import { Input } from '@/shared/ui/Input/Input'
+import { Input } from '@/shared/ui/Input'
 import { type SortOrder } from '@/shared/types'
-import { type TabItem } from '@/shared/ui/Tabs/Tabs'
+import { type TabItem } from '@/shared/ui/Tabs'
 
 interface ArticlePageFilterProps {
   className?: string

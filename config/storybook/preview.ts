@@ -11,6 +11,7 @@ import {
 import {
   SuspenseDecorator,
 } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
+import {Theme} from "@/shared/const";
 
 const preview = {
   parameters: {

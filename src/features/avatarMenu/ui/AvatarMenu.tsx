@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Menu } from '@/shared/ui/Popups'
-import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import { Menu } from '@/shared/ui/Popups/ui/Menu/Menu'
+import { Avatar } from '@/shared/ui/Avatar'
 import { RoutePath } from '@/shared/const'
 
 interface AvatarMenuProps {

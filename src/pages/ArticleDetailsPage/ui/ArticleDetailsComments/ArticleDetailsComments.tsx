@@ -13,12 +13,12 @@ import {
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
 import cls from './ArticleDetailsComments.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 import { AddCommentForm } from '@/features/addCommentForm'
 import { CommentList } from '@/entities/Comment'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Loader } from '@/shared/ui/Loader/Loader'
+import { Loader } from '@/shared/ui/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string
