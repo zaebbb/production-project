@@ -1,7 +1,7 @@
 import { ValidateProfileError } from '../../types/EditablePofileCardSchema'
 import { validateProfileData } from './validateProfileData'
-import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
 import { type Profile } from '@/entities/Profile'
 
 const data: Profile = {

@@ -8,8 +8,8 @@ import { type StateSchema } from './StateSchema'
 import { createReducerManager } from './reducerManager'
 import { counterReducer } from '@/entities/Counter'
 import { userReducer } from '@/entities/User'
-import { $api } from '@/shared/api/api'
 import { saveScrollReducer } from '@/features/ScrollSave'
+import { $api } from '@/shared/api/api'
 import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore (

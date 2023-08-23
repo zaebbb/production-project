@@ -1,13 +1,13 @@
 import React, { memo, type MutableRefObject, type UIEvent } from 'react'
-import { useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 import cls from './Page.module.scss'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { useInfinityScroll } from '@/shared/lib/hooks/useInfinityScroll/useInfinityScroll'
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { type StateSchema } from '@/app/providers/StoreProvider'
 import { getSaveScrollPath, saveScrollActions } from '@/features/ScrollSave'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInfinityScroll } from '@/shared/lib/hooks/useInfinityScroll/useInfinityScroll'
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle'
 
 interface PageProps {

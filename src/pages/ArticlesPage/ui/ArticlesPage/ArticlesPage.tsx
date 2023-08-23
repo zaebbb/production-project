@@ -1,15 +1,15 @@
 import React, { memo } from 'react'
-import { articlesPageReducer } from '../../model/slice/articlePageSlice'
 import {
   FetchNextArticlePage,
 } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage'
-import { ArticlePageFilter } from '../ArticlePageFilter/ArticlePageFilter'
+import { articlesPageReducer } from '../../model/slice/articlePageSlice'
 import { ArticleInfinityList } from '../ArticleInfinityList/ArticleInfinityList'
+import { ArticlePageFilter } from '../ArticlePageFilter/ArticlePageFilter'
 import cls from './ArticlesPage.module.scss'
-import { Page } from '@/widgets/Page'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { classNames } from '@/shared/lib/classNames/classNames'
+import { Page } from '@/widgets/Page'
 
 interface ArticlesPageProps {
   className?: string
