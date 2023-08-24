@@ -13,15 +13,22 @@ import {
 } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
 import {Theme} from "@/shared/const";
 
-const preview = {
-  parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
+export const parameters = {
+  actions: { argTypesRegex: '^on[A-Z].*' },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
     },
+  },
+  layout: 'fullscreen',
+  themes: {
+    default: 'light',
+    list: [
+      { name: 'light', class: Theme.LIGHT, color: '#a4ccdc' },
+      { name: 'dark', class: Theme.DARK, color: '#21314b' },
+      { name: 'red', class: Theme.RED, color: '#c74646' }
+    ],
   },
 }
 
@@ -29,5 +36,3 @@ addDecorator(BrowserRouterDecorator)
 addDecorator(StyleDecorator)
 addDecorator(SuspenseDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
-
-export default preview
