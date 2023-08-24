@@ -6,7 +6,7 @@ import { getUserAuthData } from '@/entities/User'
 import { LoginModal } from '@/features/AuthByUsername'
 import { AvatarMenu } from '@/features/avatarMenu'
 import { NotificationButton } from '@/features/notificationButton'
-import { RoutePath } from '@/shared/const'
+import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { Button, ThemeButton } from '@/shared/ui/Button'
@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
 
         <HStack align={'center'} className={cls.links}>
           <AppLink
-            to={RoutePath.article_add}
+            to={getRouteArticleCreate()}
             theme={AppLinkTheme.SECONDARY}
           >
             {t('create-article')}
