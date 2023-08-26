@@ -12,7 +12,7 @@ const MainPage: React.FC<MainPageProps> = (props) => {
   const { t } = useTranslation(lang)
 
   return (
-    <Page>
+    <Page data-testid={'MainPage'}>
       {t('title')}
     </Page>
   )

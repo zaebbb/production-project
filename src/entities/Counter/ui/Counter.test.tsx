@@ -1,5 +1,5 @@
-import { userEvent } from '@storybook/testing-library'
 import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { Counter } from './Counter'
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender'
 
@@ -21,7 +21,7 @@ describe('Тест <Counter />', () => {
 
   test(
     'Увеличение счетчика',
-    () => {
+    async () => {
       componentRender(<Counter />, {
         initialState: {
           counter: {
@@ -30,14 +30,14 @@ describe('Тест <Counter />', () => {
         },
       })
 
-      userEvent.click(screen.getByTestId('increment'))
+      await userEvent.click(screen.getByTestId('increment'))
       expect(screen.getByTestId('value-title')).toHaveTextContent('11')
     }
   )
 
   test(
     'Уменьшение счетчика на 3',
-    () => {
+    async () => {
       componentRender(<Counter />, {
         initialState: {
           counter: {
@@ -46,9 +46,9 @@ describe('Тест <Counter />', () => {
         },
       })
 
-      userEvent.click(screen.getByTestId('decrement'))
-      userEvent.click(screen.getByTestId('decrement'))
-      userEvent.click(screen.getByTestId('decrement'))
+      await userEvent.click(screen.getByTestId('decrement'))
+      await userEvent.click(screen.getByTestId('decrement'))
+      await userEvent.click(screen.getByTestId('decrement'))
       expect(screen.getByTestId('value-title')).toHaveTextContent('7')
     }
   )
