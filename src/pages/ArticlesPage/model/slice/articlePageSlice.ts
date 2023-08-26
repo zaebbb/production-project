@@ -4,7 +4,7 @@ import { fetchArticles } from '../services/fetchArticles/fetchArticles'
 import { LOCAL_STORAGE_ARTICLE_VIEW } from '../types/articlePage'
 import { type ArticlePageSchema } from '../types/articlePageSchema'
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article'
-import { type SortOrder } from '@/shared/types'
+import { type SortOrder } from '@/shared/types/role'
 
 const articlesPageSlice = createSlice({
   name: 'articlesPageSlice',
