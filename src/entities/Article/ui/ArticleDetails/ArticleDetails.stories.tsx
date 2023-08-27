@@ -1,6 +1,7 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react'
 import { ArticleBlockType } from '../../model/types/article'
 import { ArticleDetails } from './ArticleDetails'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
@@ -19,8 +20,7 @@ Primary.decorators = [
         id: '1',
         title: 'JavaScript',
         subtitle: 'new js 2023',
-        // eslint-disable-next-line max-len
-        image: 'https://images.unsplash.com/photo-1689509293411-b199bdbf96fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxODY2Nzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTEyMTc3NTl8&ixlib=rb-4.0.3&q=80&w=1080',
+        image: ImageStorybook,
         views: 1022,
         createdAt: '26.06.2023',
         type: [],
@@ -58,8 +58,7 @@ Primary.decorators = [
           {
             id: '2',
             type: ArticleBlockType.IMAGE,
-            // eslint-disable-next-line max-len
-            src: 'https://images.unsplash.com/photo-1689509293411-b199bdbf96fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxODY2Nzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTEyMTc3NTl8&ixlib=rb-4.0.3&q=80&w=1080',
+            src: ImageStorybook,
             title: 'Рисунок 1 - скриншот сайта',
           },
           {
@@ -82,8 +81,7 @@ Primary.decorators = [
           {
             id: '8',
             type: ArticleBlockType.IMAGE,
-            // eslint-disable-next-line max-len
-            src: 'https://hsto.org/r/w1560/getpro/habr/post_images/d56/a02/ffc/d56a02ffc62949b42904ca00c63d8cc1.png',
+            src: ImageStorybook,
             title: 'Рисунок 1 - скриншот сайта',
           },
           {

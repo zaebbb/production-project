@@ -1,6 +1,7 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react'
 import withMock from 'storybook-addon-mock'
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
@@ -31,7 +32,7 @@ Primary.parameters = {
           subtitle: 'new js 2023',
           userId: '1',
           // eslint-disable-next-line max-len
-          image: 'https://randomwordgenerator.com/img/picture-generator/55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640.jpg',
+          image: ImageStorybook,
           views: 1022,
           createdAt: '26.06.2023',
           type: [
@@ -46,7 +47,7 @@ Primary.parameters = {
           subtitle: 'new js 2023',
           userId: '1',
           // eslint-disable-next-line max-len
-          image: 'https://randomwordgenerator.com/img/picture-generator/55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640.jpg',
+          image: ImageStorybook,
           views: 1022,
           createdAt: '26.06.2023',
           type: [
@@ -61,7 +62,7 @@ Primary.parameters = {
           subtitle: 'new js 2023',
           userId: '1',
           // eslint-disable-next-line max-len
-          image: 'https://randomwordgenerator.com/img/picture-generator/55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640.jpg',
+          image: ImageStorybook,
           views: 1022,
           createdAt: '26.06.2023',
           type: [
@@ -76,7 +77,7 @@ Primary.parameters = {
           subtitle: 'new js 2023',
           userId: '1',
           // eslint-disable-next-line max-len
-          image: 'https://randomwordgenerator.com/img/picture-generator/55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640.jpg',
+          image: ImageStorybook,
           views: 1022,
           createdAt: '26.06.2023',
           type: [
