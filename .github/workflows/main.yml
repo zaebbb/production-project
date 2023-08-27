@@ -1,4 +1,4 @@
-name: Линтер кода, Тестирование, Сборка
+name: Линтер кода, Тестирование, Сборка, Регрессионное тестирование
 run-name: ${{ github.actor }} тестирует Github Actions
 on:
   push:
@@ -20,13 +20,30 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Установка зависимостей
-        run: npm install
+        run: npm ci --force
 
-      - name: Продакшен сборка проекта webpack
-        run: npm run build:prod
+      - name: Сборка Storybook
+        run: npm run storybook:build
 
-      - name: Продакшен сборка проекта vite
-        run: npm run build:prod:vite
+      - name: Регрессионное тестирование (Скриншотное тестирование)
+        if: always()
+        run: npm run test:ui:ci
+
+  linting:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Установка зависимостей
+        run: npm ci --force
 
       - name: Линтер Typescript
         if: always()
@@ -36,13 +53,44 @@ jobs:
         if: always()
         run: npm run lint:scss
 
+  unit-testing:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
       - name: Unit-тестирование
         if: always()
         run: npm run test:unit
 
-      - name: Сборка Storybook
-        run: npm run storybook:build
+  build-production:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
 
-      - name: Регрессионное тестирование (Скриншотное тестирование)
-        if: always()
-        run: npm run test:ui:ci
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
+      - name: Продакшен сборка проекта webpack
+        run: npm run build:prod
+
+      - name: Продакшен сборка проекта vite
+        run: npm run build:prod:vite

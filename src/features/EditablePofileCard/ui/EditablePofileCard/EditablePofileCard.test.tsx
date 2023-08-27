@@ -6,6 +6,7 @@ import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
 import { type Profile } from '@/entities/Profile'
 import { $api } from '@/shared/api/api'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 import { componentRender } from '@/shared/lib/tests/componentRender/componentRender'
 
 const profile: Profile = {
@@ -17,7 +18,7 @@ const profile: Profile = {
   city: 'Moscow',
   username: 'admin',
   country: Country.Russia,
-  avatar: 'https://example.com',
+  avatar: ImageStorybook,
 }
 
 const options = {
