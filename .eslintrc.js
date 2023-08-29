@@ -165,7 +165,18 @@ module.exports = {
       rules: {
         'i18next/no-literal-string': 'off',
       }
-    }
+    },
+    {
+      files: [
+        '**/cypress/**/**',
+      ],
+      rules: {
+        'dev-proger-plugin/path-checker': 'off',
+        'dev-proger-plugin/layer-imports': 'off',
+        'dev-proger-plugin/public-api-imports': 'off',
+        '@typescript-eslint/no-namespace': 'off',
+      }
+    },
   ],
   settings: {
     "import/parsers": {
@@ -183,6 +194,9 @@ module.exports = {
     'vite.config.prod.ts',
     'updateImports.ts',
     'preview.ts',
-    'createPublicApiForSharedUI.ts'
+    'createPublicApiForSharedUI.ts',
+    'cypress.config.ts',
+    '**/cypress/**/*.ts',
+    '**/scripts/**/*.{ts,js}',
   ]
 };
