@@ -16,7 +16,9 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
   const { id } = useParams<{ id: string }>()
 
   return (
-    <Page className={classNames(cls.ProfilePage, {}, [className])}>
+    <Page
+      data-testid={'ProfilePage'}
+      className={classNames(cls.ProfilePage, {}, [className])}>
       <EditablePofileCard id={String(id)} />
     </Page>
   )
