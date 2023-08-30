@@ -91,6 +91,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> =
           className={
             classNames(cls.ArticleListItem, {}, [className, cls[view]])
           }
+          data-testid={'ArticleListItem'}
         >
           <Card className={cls.card}>
             <div className={cls.header}>
@@ -134,6 +135,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> =
 
     return (
       <AppLink
+        data-testid={'ArticleListItem'}
         target={target}
         to={getRouteArticleDetails(article.id)}
         className={

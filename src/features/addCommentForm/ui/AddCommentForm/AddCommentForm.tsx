@@ -5,7 +5,10 @@ import {
   getAddCommentFormIsLoading,
   getAddCommentFormText,
 } from '../../model/selectors/addCommentFormSelectors'
-import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice'
+import {
+  addCommentFormActions,
+  addCommentFormReducer,
+} from '../../model/slice/addCommentFormSlice'
 import cls from './AddCommentForm.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
@@ -43,18 +46,23 @@ const AddCommentForm: React.FC<AddCommentFormProps> = memo((props: AddCommentFor
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <div
+        data-testid={'AddCommentForm'}
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('input-placeholder')}
           value={text}
           onChange={onCommentTextChange}
           readonly={isLoading}
+          data-testid={'add-comment-form-input'}
         />
 
         <Button
           onClick={onSendHandler}
           theme={ThemeButton.OUTLINE}
+          data-testid={'add-comment-form-button'}
         >
           {
             isLoading ? t('load-comment') : t('add-comment')

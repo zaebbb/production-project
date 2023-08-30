@@ -137,7 +137,10 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> =
 
     return (
       <DynamicModuleLoader reducers={reducers}>
-        <div className={classNames(cls.ArticleDetails, {}, [className])}>
+        <div
+          data-testid={'ArticleDetails'}
+          className={classNames(cls.ArticleDetails, {}, [className])}
+        >
           {content}
         </div>
       </DynamicModuleLoader>

@@ -1,4 +1,4 @@
-import React, { memo, Suspense } from 'react'
+import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import {
@@ -17,7 +17,6 @@ import { AddCommentForm } from '@/features/addCommentForm'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Loader } from '@/shared/ui/Loader'
 import { Text, TextSize } from '@/shared/ui/Text'
 
 interface ArticleDetailsCommentsProps {
@@ -46,20 +45,18 @@ export const ArticleDetailsComments: React.FC<ArticleDetailsCommentsProps> =
 
     return (
       <div className={classNames(cls.ArticleDetailsComments, {}, [className])}>
-        <Suspense fallback={<Loader />}>
-          <Text
-            size={TextSize.L}
-            className={cls.commentTitle}
-            title={t('article-comments')}
-          />
-          <AddCommentForm
-            onSendComment={onSendComment}
-          />
-          <CommentList
-            comments={comments}
-            isLoading={commentsIsLoading}
-          />
-        </Suspense>
+        <Text
+          size={TextSize.L}
+          className={cls.commentTitle}
+          title={t('article-comments')}
+        />
+        <AddCommentForm
+          onSendComment={onSendComment}
+        />
+        <CommentList
+          comments={comments}
+          isLoading={commentsIsLoading}
+        />
       </div>
     )
   })

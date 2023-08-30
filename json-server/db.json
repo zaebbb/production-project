@@ -2446,6 +2446,32 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Научная статья - Биология",
+      "subtitle": "БиологиЯ",
+      "image": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "AzU2Nyo"
+    },
+    {
+      "title": "Научная статья - Биология",
+      "subtitle": "БиологиЯ",
+      "image": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "vDSVsIK"
     }
   ],
   "comments": [
@@ -2490,6 +2516,30 @@
       "text": "test",
       "userId": "1",
       "id": "gUSTzJ-"
+    },
+    {
+      "articleId": "29",
+      "text": "ывывывы",
+      "userId": "1",
+      "id": "Xz42ZJ-"
+    },
+    {
+      "articleId": "29",
+      "text": "выа",
+      "userId": "1",
+      "id": "W-Dscub"
+    },
+    {
+      "articleId": "32",
+      "text": "dssfdf",
+      "userId": "5",
+      "id": "9kOCUDq"
+    },
+    {
+      "articleId": "32",
+      "text": "nnbmmn",
+      "userId": "5",
+      "id": "H07MntC"
     }
   ],
   "profile": [
@@ -2513,6 +2563,17 @@
       "country": "Belarus",
       "city": "Ekb",
       "username": "владимир",
+      "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg"
+    },
+    {
+      "id": "5",
+      "first": "test",
+      "lastname": "test",
+      "age": 2021,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Ekb",
+      "username": "test",
       "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg"
     }
   ],
