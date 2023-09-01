@@ -27,10 +27,23 @@ describe('Пользователь заходит на страницу стат
     cy.getByTestId('ArticleDetails')
     cy.getByTestId('AddCommentForm').scrollIntoView()
     cy.addComment('text')
+    cy.addComment('text 2')
+    cy.addComment('text 3')
     cy.getByTestId('CommentCard').should('have.length', 1)
   })
 
   it('Оставить оценку', () => {
+    cy.getByTestId('ArticleDetails')
+    cy.getByTestId('RatingCard').scrollIntoView()
+    cy.setRate(4, 'feedback').scrollIntoView()
+    cy.get(`[data-selected=true]`).should('have.length', 4)
+  })
+
+  it('Оставить оценку на стабах', () => {
+    cy.intercept('GET', '**/articles/*', {
+      fixture: 'article-details.json'
+    })
+
     cy.getByTestId('ArticleDetails')
     cy.getByTestId('RatingCard').scrollIntoView()
     cy.setRate(4, 'feedback').scrollIntoView()
