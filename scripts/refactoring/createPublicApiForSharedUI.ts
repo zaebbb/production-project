@@ -1,5 +1,5 @@
+import * as path from 'path'
 import { Project } from 'ts-morph'
-import * as path from 'path';
 
 const project = new Project({})
 
@@ -18,7 +18,7 @@ const isAbsolute = (value: string) => {
 }
 
 componentDirs?.forEach(directory => {
-  const indexFilePath = directory.getPath + '/index.ts'
+  const indexFilePath = directory.getPath() + '/index.ts'
   const indexFile = directory.getSourceFile(indexFilePath)
 
   if (!indexFile) {
