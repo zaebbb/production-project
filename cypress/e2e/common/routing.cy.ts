@@ -1,4 +1,4 @@
-import { selectByTestId } from "../../helpers/selectByTestId";
+import { selectByTestId } from '../../helpers/selectByTestId'
 
 describe('template spec', () => {
   describe('Пользователь не авторизован', () => {
@@ -20,7 +20,7 @@ describe('template spec', () => {
 
   describe('Пользователь авторизован', () => {
     beforeEach(() => {
-      cy.login('testUser', 'testPassword')
+      cy.commandLogin('testUser', 'testPassword')
     })
 
     it('Переход открывает страницу профиля', () => {

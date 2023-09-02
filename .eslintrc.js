@@ -171,10 +171,11 @@ module.exports = {
         '**/cypress/**/**',
       ],
       rules: {
-        'dev-proger-plugin/path-checker': 'off',
-        'dev-proger-plugin/layer-imports': 'off',
-        'dev-proger-plugin/public-api-imports': 'off',
+        'dev-proger-eslint-plugin/path-checker-fsd': 'off',
+        'dev-proger-eslint-plugin/layer-imports': 'off',
+        'dev-proger-eslint-plugin/public-api-imports': 'off',
         '@typescript-eslint/no-namespace': 'off',
+        '@typescript-eslint/method-signature-style': 'off',
       }
     },
   ],
@@ -194,9 +195,7 @@ module.exports = {
     'vite.config.prod.ts',
     'updateImports.ts',
     'preview.ts',
-    'createPublicApiForSharedUI.ts',
     'cypress.config.ts',
-    '**/cypress/**/*.ts',
     '**/scripts/**/*.{ts,js}',
   ]
 };

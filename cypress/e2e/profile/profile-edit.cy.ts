@@ -3,8 +3,8 @@ let profileId = ''
 describe('Пользователь заходит на страницу профиля', () => {
   beforeEach(() => {
     cy.commandLogin('testUser', 'testPassword').then(data => {
-      cy.visit(`/profile/${data.id}`)
       profileId = data.id
+      cy.visit(`/profile/${profileId}`)
     })
   })
 
