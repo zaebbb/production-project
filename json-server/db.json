@@ -78,7 +78,11 @@
       "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg",
       "roles": [
         "ADMIN"
-      ]
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isArticleCounterEnabled": true
+      }
     },
     {
       "id": "2",
@@ -87,7 +91,11 @@
       "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg",
       "roles": [
         "USER"
-      ]
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isArticleCounterEnabled": true
+      }
     },
     {
       "id": "3",
@@ -96,7 +104,11 @@
       "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg",
       "roles": [
         "MANAGER"
-      ]
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isArticleCounterEnabled": true
+      }
     },
     {
       "id": "4",
@@ -105,7 +117,11 @@
       "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg",
       "roles": [
         "USER"
-      ]
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isArticleCounterEnabled": false
+      }
     },
     {
       "id": "5",
@@ -114,7 +130,11 @@
       "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg",
       "roles": [
         "ADMIN"
-      ]
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isArticleCounterEnabled": false
+      }
     }
   ],
   "articles": [
