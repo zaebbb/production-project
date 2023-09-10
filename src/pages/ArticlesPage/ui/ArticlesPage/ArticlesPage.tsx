@@ -6,6 +6,7 @@ import { articlesPageReducer } from '../../model/slice/articlePageSlice'
 import { ArticleInfinityList } from '../ArticleInfinityList/ArticleInfinityList'
 import { ArticlePageFilter } from '../ArticlePageFilter/ArticlePageFilter'
 import cls from './ArticlesPage.module.scss'
+import { ArticlePageGreeting } from '@/features/ArticlePageGreeting'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -38,6 +39,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
       >
         <ArticlePageFilter />
         <ArticleInfinityList className={cls.list} />
+        <ArticlePageGreeting />
       </Page>
     </DynamicModuleLoader>
   )
