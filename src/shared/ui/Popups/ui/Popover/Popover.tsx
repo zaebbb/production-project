@@ -12,6 +12,10 @@ interface PopoverProps {
   children: React.ReactNode
 }
 
+/**
+ * Данный компонент устарел, используйте новый UI-kit
+ * @deprecated
+ * */
 export const Popover: React.FC<PopoverProps> = memo((props: PopoverProps) => {
   const {
     className,

@@ -13,6 +13,10 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   theme?: CardTheme
 }
 
+/**
+ * Данный компонент устарел, используйте новый UI-kit
+ * @deprecated
+ * */
 export const Card: React.FC<CardProps> = memo((props: CardProps) => {
   const {
     className,

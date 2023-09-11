@@ -13,7 +13,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { getFeatureFlags, ToggleFeatures } from '@/shared/lib/features'
 import { VStack } from '@/shared/ui/Stack'
-import { Text } from '@/shared/ui/Text'
+import { Text } from '@/shared/ui/deprecated/Text'
 import { Page } from '@/widgets/Page'
 
 interface ArticleDetailsPageProps {

@@ -3,9 +3,9 @@ import { type ArticleImageBlock } from '../../model/types/article'
 import cls from './ArticleImageBlockComponent.module.scss'
 import NotFoundImage from '@/shared/assets/images/not-found.png'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AppImages } from '@/shared/ui/AppImages'
-import { Skeleton } from '@/shared/ui/Skeleton'
-import { Text, TextAlign } from '@/shared/ui/Text'
+import { AppImages } from '@/shared/ui/deprecated/AppImages'
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton'
+import { Text, TextAlign } from '@/shared/ui/deprecated/Text'
 
 interface ArticleImageBlockComponentProps {
   className?: string

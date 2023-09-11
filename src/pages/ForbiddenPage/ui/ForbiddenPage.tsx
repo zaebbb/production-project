@@ -2,10 +2,10 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getRouteMain } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AppLink } from '@/shared/ui/AppLink'
-import { Button, ThemeButton } from '@/shared/ui/Button'
 import { VStack } from '@/shared/ui/Stack'
-import { TextSize, Text } from '@/shared/ui/Text'
+import { AppLink } from '@/shared/ui/deprecated/AppLink'
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { TextSize, Text } from '@/shared/ui/deprecated/Text'
 import { Page } from '@/widgets/Page'
 
 interface ForbiddenPageProps {
