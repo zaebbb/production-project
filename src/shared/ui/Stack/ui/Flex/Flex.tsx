@@ -33,6 +33,10 @@ export interface FlexProps extends DivProps {
   gap?: FlexGap
 }
 
+/**
+ * Данный компонент устарел, используйте новый UI-kit
+ * @deprecated
+ * */
 export const Flex: React.FC<FlexProps> = (props: FlexProps) => {
   const {
     className,

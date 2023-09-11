@@ -1,7 +1,7 @@
 import { Listbox as HListBox } from '@headlessui/react'
 import React, { Fragment, memo } from 'react'
-import { Button, ThemeButton } from '../../../Button/Button'
 import { HStack } from '../../../Stack'
+import { Button, ThemeButton } from '../../../deprecated/Button/Button'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
@@ -23,6 +23,10 @@ interface ListBoxProps {
   direction?: DirectionType
 }
 
+/**
+ * Данный компонент устарел, используйте новый UI-kit
+ * @deprecated
+ * */
 export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
   const {
     className,

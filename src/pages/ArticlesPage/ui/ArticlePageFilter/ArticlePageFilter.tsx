@@ -23,8 +23,8 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
 import { type SortOrder } from '@/shared/types/role'
-import { Input } from '@/shared/ui/Input'
-import { type TabItem } from '@/shared/ui/Tabs'
+import { Input } from '@/shared/ui/deprecated/Input'
+import { type TabItem } from '@/shared/ui/deprecated/Tabs'
 
 interface ArticlePageFilterProps {
   className?: string
