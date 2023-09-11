@@ -15,6 +15,7 @@ import { Button, SizeButton, ThemeButton } from '@/shared/ui/deprecated/Button'
 interface SidebarProps {
   className?: string
   lang?: string
+
 }
 
 export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
