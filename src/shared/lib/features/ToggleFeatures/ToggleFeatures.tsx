@@ -4,15 +4,15 @@ import { type FeatureFlags } from '@/shared/types/featureFlags'
 
 interface ToggleFeaturesProps {
   feature: keyof FeatureFlags
-  on: React.ReactElement
   off: React.ReactElement
+  on: React.ReactElement
 }
 
 export const ToggleFeatures = (props: ToggleFeaturesProps) => {
   const {
     feature,
-    on,
     off,
+    on,
   } = props
 
   if (getFeatureFlags(feature)) {

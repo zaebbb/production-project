@@ -81,7 +81,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleCounterEnabled": true
+        "isArticleCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_dark_theme",
@@ -100,7 +101,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isArticleCounterEnabled": true
+        "isArticleCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_blue_theme",
@@ -118,7 +120,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleCounterEnabled": true
+        "isArticleCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_blue_theme",
@@ -136,7 +139,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isArticleCounterEnabled": false
+        "isArticleCounterEnabled": false,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_blue_theme",
@@ -154,7 +158,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleCounterEnabled": false
+        "isArticleCounterEnabled": false,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_blue_theme",
