@@ -11,7 +11,7 @@ import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsLis
 import { ArticleRating } from '@/features/articleRating'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features'
+import { getFeatureFlags, ToggleFeatures } from '@/shared/lib/features'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
@@ -38,12 +38,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
     )
   }
 
-  const counter = toggleFeatures({
-    name: 'isArticleCounterEnabled',
-    on: () => <Counter />,
-    off: () => <Counter />,
-  })
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -51,7 +45,11 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
           {isArticleRatingEnabled && <ArticleRating id={id}/>}
-          {counter}
+          <ToggleFeatures
+            feature={'isArticleCounterEnabled'}
+            on={<Counter />}
+            off={<Counter />}
+          />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
