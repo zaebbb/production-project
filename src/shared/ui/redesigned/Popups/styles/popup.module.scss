@@ -1,0 +1,33 @@
+.menu {
+  overflow: hidden;
+  border: 1px solid var(--accept-redesigned);
+  border-radius: 18px;
+}
+
+.direction-top-right {
+  right: 0;
+  bottom: 100%;
+}
+
+.direction-top-left {
+  bottom: 100%;
+  left: 0;
+}
+
+.direction-bottom-right {
+  top: 100%;
+  right: 0;
+}
+
+.direction-bottom-left {
+  top: 100%;
+  left: 0;
+}
+
+.active {
+  background: var(--light-bg-redesigned);
+}
+
+.disabled {
+  opacity: 0.5;
+}
