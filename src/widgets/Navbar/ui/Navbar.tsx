@@ -9,10 +9,10 @@ import { NotificationButton } from '@/features/notificationButton'
 import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
-import { HStack } from '@/shared/ui/Stack'
-import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink'
+import { AppLink as AppLinkDeprecated, AppLinkTheme } from '@/shared/ui/deprecated/AppLink'
 import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
+import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface NavbarProps {
   className?: string
@@ -45,12 +45,12 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
             <Text text={t('logo-text')} theme={TextTheme.PRIMARY_INVERTED} />
 
             <HStack align={'center'} className={cls.links}>
-              <AppLink
+              <AppLinkDeprecated
                 to={getRouteArticleCreate()}
                 theme={AppLinkTheme.SECONDARY}
               >
                 {t('create-article')}
-              </AppLink>
+              </AppLinkDeprecated>
               <NotificationButton />
               <AvatarMenu lang={lang} />
             </HStack>
