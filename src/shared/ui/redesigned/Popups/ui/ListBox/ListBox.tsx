@@ -1,10 +1,12 @@
 import { Listbox as HListBox } from '@headlessui/react'
 import React, { Fragment } from 'react'
 import { Button } from '../../../Button/Button'
+import { Icon } from '../../../Icon'
 import { HStack } from '../../../Stack'
 import { Text } from '../../../Text/Text'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
+import ArrowBottom from '@/shared/assets/icons/redesigned/ArrowBottomListBox.svg'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 import { TypedMemo } from '@/shared/lib/components/TypedMemo'
 import { type DirectionType } from '@/shared/types/ui'
@@ -66,6 +68,7 @@ export const ListBoxComponent = <T extends string>(props: ListBoxProps<T>) => {
             variant={'filled'}
             disabled={readonly}
             className={cls.button}
+            addonRight={<Icon Svg={ArrowBottom} />}
           >
             {selectedItem?.content ?? defaultValue}
           </Button>

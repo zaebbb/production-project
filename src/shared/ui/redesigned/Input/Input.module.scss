@@ -1,16 +1,36 @@
-.Input {
-  display: inline-block;
+.InputWrapper {
+  display: flex;
+  align-items: center;
 
   width: 100%;
-  max-width: 400px;
-  padding: 8px 15px;
+  height: 30px;
+  padding: 8px 14px;
 
-  color: var(--primary-color);
+  border: 2px solid var(--icon-redesigned);
+  border-radius: 48px;
+}
+
+.addonLeft,
+.addonRight {
+  display: flex;
+}
+
+.withAddonLeft {
+  padding-left: 8px;
+}
+
+.withAddonRight {
+  padding-right: 8px;
+}
+
+.input {
+  width: 100%;
+
+  color: var(--text-redesigned);
 
   appearance: none;
-  background: white;
+  background: none;
   border: none;
-  border-radius: 8px;
   outline: none;
 
   &::-webkit-outer-spin-button,
@@ -20,10 +40,19 @@
   }
 
   &::placeholder {
-    color: var(--primary-color);
+    color: var(--hint-redesigned);
   }
 }
 
 .readonly {
   opacity: 0.5;
+}
+
+.focused {
+  border: 2px solid var(--accept-redesigned);
+
+  .addonLeft svg,
+  .addonRight svg {
+    color: var(--accept-redesigned);
+  }
 }
