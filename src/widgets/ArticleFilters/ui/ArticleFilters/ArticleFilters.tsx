@@ -4,9 +4,11 @@ import cls from './ArticleFilters.module.scss'
 import { type ArticleSortField, type ArticleType } from '@/entities/Article'
 import { ArticleSortSelector } from '@/features/ArticleSortSelector'
 import { ArticleTabs } from '@/features/ArticleTabs'
+import SearchIcon from '@/shared/assets/icons/redesigned/SearchIcon.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { type SortOrder } from '@/shared/types/role'
 import { Card } from '@/shared/ui/redesigned/Card'
+import { Icon } from '@/shared/ui/redesigned/Icon'
 import { Input } from '@/shared/ui/redesigned/Input'
 import { VStack } from '@/shared/ui/redesigned/Stack'
 import { type TabItem } from '@/shared/ui/redesigned/Tabs'
@@ -48,6 +50,7 @@ export const ArticleFilters: React.FC<ArticleFiltersProps> = memo((props: Articl
           value={search}
           onChange={onChangeSearch}
           className={cls.search}
+          addonLeft={<Icon Svg={SearchIcon} />}
         />
         <ArticleTabs
           className={cls.types}
