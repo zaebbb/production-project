@@ -51,6 +51,7 @@ export const ArticleFilters: React.FC<ArticleFiltersProps> = memo((props: Articl
           onChange={onChangeSearch}
           className={cls.search}
           addonLeft={<Icon Svg={SearchIcon} />}
+          size={'s'}
         />
         <ArticleTabs
           className={cls.types}

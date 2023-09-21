@@ -1,6 +1,8 @@
 import React, { memo } from 'react'
 import { Country } from '../../model/types/country'
-import { ListBox } from '@/shared/ui/Popups/ui/ListBox/ListBox'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { ListBox as ListBoxRedesigned } from '@/shared/ui/Popups/ui/ListBox/ListBox'
+import { ListBox } from '@/shared/ui/redesigned/Popups/ui/ListBox/ListBox'
 
 interface CountrySelectProps {
   className?: string
@@ -30,14 +32,30 @@ export const CountrySelect: React.FC<CountrySelectProps> = memo((props: CountryS
   }, [onChange])
 
   return (
-    <ListBox
-      className={className}
-      label={label}
-      value={value}
-      readonly={readonly}
-      onChange={onChangeHandler}
-      options={options}
-      direction={'top-left'}
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <ListBoxRedesigned
+          className={className}
+          label={label}
+          value={value}
+          readonly={readonly}
+          onChange={onChangeHandler}
+          options={options}
+          direction={'top-left'}
+        />
+      }
+      on={
+        <ListBox
+          className={className}
+          label={label}
+          value={value}
+          readonly={readonly}
+          onChange={onChangeHandler}
+          options={options}
+          direction={'top-left'}
+        />
+      }
     />
   )
 })
