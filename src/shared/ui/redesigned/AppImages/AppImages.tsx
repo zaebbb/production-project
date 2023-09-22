@@ -24,7 +24,7 @@ export const AppImages: React.FC<AppImagesProps> = memo((props: AppImagesProps) 
     image.onload = () => {
       setIsLoading(false)
     }
-    image.onload = () => {
+    image.onerror = () => {
       setIsLoading(false)
       setHasError(true)
     }

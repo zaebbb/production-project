@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import cls from './Text.module.scss'
-import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
+import { type Additional, classNames, type Mods } from '@/shared/lib/classNames/classNames'
 
 export type TextVariant = 'primary' | 'error' | 'accept'
 
@@ -15,6 +15,7 @@ interface TextProps {
   variant?: TextVariant
   align?: TextAlign
   size?: TextSize
+  isBold?: boolean
   'data-testid'?: string
 }
 
@@ -34,6 +35,7 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
     variant = 'primary',
     align = 'left',
     size = 'm',
+    isBold = false,
     'data-testid': testId = '',
   } = props
 
@@ -46,10 +48,14 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
     cls[size],
   ]
 
+  const mods: Mods = {
+    [cls.bold]: isBold,
+  }
+
   return (
     <div
       className={
-        classNames(cls.Text, {}, additional)
+        classNames(cls.Text, mods, additional)
       }
     >
       {
