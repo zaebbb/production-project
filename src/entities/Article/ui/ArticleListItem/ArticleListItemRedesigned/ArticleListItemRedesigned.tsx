@@ -28,11 +28,11 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
     } = props
     const { t } = useTranslation('article')
 
-    const types = (
-      <Text
-        text={article.type.join(', ')}
-        className={cls.types}
-      />
+    const userInfo = (
+      <>
+        <Avatar size={32} src={article.user.avatar} />
+        <Text isBold text={article.user.username} />
+      </>
     )
 
     const views = (
@@ -61,16 +61,6 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
       />
     )
 
-    const image = (
-      <AppImages
-        src={article.image}
-        alt={article.title}
-        className={cls.img}
-        fallback={skeleton}
-        errorFallback={fallbackImage}
-      />
-    )
-
     if (view === ArticleView.BIG) {
       const textBlock = article.blocks.find(
         block => block.type === ArticleBlockType.TEXT
@@ -89,8 +79,7 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
         >
           <VStack isMax gap={16}>
             <HStack gap={8} isMax>
-              <Avatar size={32} src={article.user.avatar} />
-              <Text isBold text={article.user.username} />
+              {userInfo}
               <Text text={article.createdAt} />
             </HStack>
 
@@ -140,21 +129,33 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
       >
         <Card
           className={cls.card}
+          borderRadius={'round'}
         >
-          <div className={cls.imageWrapper}>
-            {image}
-            <Text text={article.createdAt} className={cls.date} />
-          </div>
-
-          <div className={cls.infoWrapper}>
-            {types}
-            {views}
-          </div>
-
-          <Text
-            text={article.title}
-            className={cls.title}
+          <AppImages
+            src={article.image}
+            alt={article.title}
+            className={cls.img}
+            fallback={skeleton}
+            errorFallback={fallbackImage}
           />
+
+          <VStack className={cls.info}>
+            <Text
+              text={article.title}
+              className={cls.title}
+            />
+
+            <VStack isMax className={cls.footer} gap={4}>
+              <HStack justify={'space-between'} isMax>
+                <Text
+                  className={cls.date}
+                  text={article.createdAt}
+                />
+                {views}
+              </HStack>
+              <HStack gap={4}>{userInfo}</HStack>
+            </VStack>
+          </VStack>
         </Card>
       </AppLink>
     )
