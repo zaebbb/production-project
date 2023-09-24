@@ -2,7 +2,6 @@ import { Menu as HMenu } from '@headlessui/react'
 import React, { Fragment, memo } from 'react'
 import { type Additional, classNames } from '../../../../../lib/classNames/classNames'
 import { AppLink } from '../../../AppLink/AppLink'
-import { Button } from '../../../Button/Button'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './Menu.module.scss'
 import { type DirectionType } from '@/shared/types/ui'
@@ -46,7 +45,8 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
         {
           items.map((item) => {
             const content = ({ active }: { active: boolean }) => (
-              <Button
+              <button
+                type={'button'}
                 disabled={item?.disabled}
                 onClick={item?.onClick}
                 className={
@@ -60,7 +60,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
                 }
               >
                 {item.content}
-              </Button>
+              </button>
             )
 
             if (item.href) {

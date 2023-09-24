@@ -56,6 +56,7 @@
   "modal-auth-title": "modal-auth-title",
   "nav-admin": "",
   "nav-profile": "",
+  "nav-settings": "nav-settings",
   "not-found": "not-found",
   "please-reload-page": "please-reload-page",
   "profile": "profile",
@@ -73,10 +74,14 @@
   "profile-save": "profile-save",
   "reload-page": "reload-page",
   "send-rating": "send-rating",
+  "settings-user": "settings-user",
   "title": "title",
   "to-main-page": "to-main-page",
   "toggle-sidebar": "toggle-sidebar",
   "unexpected-error": "unexpected-error",
+  "used-design-new": "used-design-new",
+  "used-design-old": "used-design-old",
+  "user-design": "user-design",
   "you-use-like-rating": "you-use-like-rating",
   "your-feedback": "your-feedback"
 }
