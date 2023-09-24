@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Modal } from 'src/shared/ui/redesigned/Modal'
 import { saveJsonSettings, useJsonSettings } from '@/entities/User'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Modal } from '@/shared/ui/deprecated/Modal'
 import { Text } from '@/shared/ui/deprecated/Text'
 
 interface ArticlePageGreetingProps {

@@ -7,10 +7,6 @@ interface OverlayProps {
   onClick?: () => void
 }
 
-/**
- * Данный компонент устарел, используйте новый UI-kit
- * @deprecated
- * */
 export const Overlay: React.FC<OverlayProps> = memo((props: OverlayProps) => {
   const { className, onClick } = props
 

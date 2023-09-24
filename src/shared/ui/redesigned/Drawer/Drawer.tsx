@@ -1,9 +1,10 @@
 import React, { memo } from 'react'
-import { Overlay } from '../Overlay/Overlay'
+import { Overlay } from '../../redesigned/Overlay/Overlay'
 import { Portal } from '../Portal'
 import cls from './Drawer.module.scss'
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider'
+import { toggleFeatures } from '@/shared/lib/features'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 
 interface DrawerProps {
@@ -16,10 +17,6 @@ interface DrawerProps {
 
 const height = window.innerHeight - 100
 
-/**
- * Данный компонент устарел, используйте новый UI-kit
- * @deprecated
- * */
 export const DrawerContent: React.FC<DrawerProps> = memo((props: DrawerProps) => {
   const {
     className,
@@ -106,8 +103,25 @@ export const DrawerContent: React.FC<DrawerProps> = memo((props: DrawerProps) =>
   const display = y.to((py) => (py < height ? 'block' : 'none'))
 
   return (
-    <Portal>
-      <div className={classNames(cls.Drawer, mods, [className, theme, 'app_drawer'])}>
+    <Portal element={document.getElementById('app') ?? document.body}>
+      <div
+        className={
+          classNames(
+            cls.Drawer,
+            mods,
+            [
+              className,
+              theme,
+              'app_drawer',
+              toggleFeatures({
+                name: 'isAppRedesigned',
+                on: () => cls.drawerRedesigned,
+                off: () => cls.drawerDeprecated,
+              }),
+            ]
+          )
+        }
+      >
         <Overlay onClick={close} />
         <a.div
           className={cls.sheet}
