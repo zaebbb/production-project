@@ -17,11 +17,15 @@
   "like-rating": "Comment on the article",
   "add-feedback-title": "Leave a review",
   "you-use-like-rating": "Thank you for the review!",
+  "button-article-edit": "Edit",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
   "profile-change-currency": "Your currency",
   "used-design-new": "New",
   "used-design-old": "Old",
   "user-design": "Interface variant",
-  "settings-user": "User settings"
+  "settings-user": "User settings",
+  "views-to": "views-to",
+  "{{count}} views-to_other": "{{count}} views",
+  "{{count}} views-to_one": "{{count}} view"
 }
