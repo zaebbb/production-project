@@ -3,5 +3,7 @@
   "btn-logout": "Выйти",
   "create-article": "Добавление статьи",
   "logo-text": "DEV-PROGER",
+  "nav-admin": "Админ",
+  "nav-settings": "Настройки",
   "nav-profile": "Профиль"
 }

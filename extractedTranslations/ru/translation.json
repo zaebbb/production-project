@@ -78,5 +78,10 @@
   "your-feedback": "your-feedback",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
-  "profile-change-currency": "profile-change-currency"
+  "profile-change-currency": "profile-change-currency",
+  "used-design-new": "used-design-new",
+  "used-design-old": "used-design-old",
+  "user-design": "user-design",
+  "settings-user": "settings-user",
+  "nav-settings": "nav-settings"
 }

@@ -9,8 +9,8 @@
   "error-auth": "Неверный логин или пароль",
   "to-main-page": "to-main-page",
   "access-denied": "access-denied",
+  "article-search": "Поиск",
   "admin-page": "admin-page",
-  "nav-admin": "nav-admin",
   "your-feedback": "Ваш отзыв",
   "close-rating-modal": "Закрыть",
   "send-rating": "Отправить",
@@ -19,5 +19,9 @@
   "you-use-like-rating": "Спасибо за оценку!",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
-  "profile-change-currency": "profile-change-currency"
+  "profile-change-currency": "profile-change-currency",
+  "used-design-new": "Новый",
+  "used-design-old": "Старый",
+  "user-design": "Вариант интерфейса",
+  "settings-user": "Настройки пользователя"
 }

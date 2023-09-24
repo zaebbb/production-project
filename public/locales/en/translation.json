@@ -9,8 +9,8 @@
   "error-auth": "Incorrect Login Or Password",
   "to-main-page": "to-main-page",
   "access-denied": "access-denied",
+  "article-search": "Search",
   "admin-page": "admin-page",
-  "nav-admin": "nav-admin",
   "your-feedback": "Your feedback",
   "close-rating-modal": "Close",
   "send-rating": "Send",
@@ -19,5 +19,9 @@
   "you-use-like-rating": "Thank you for the review!",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
-  "profile-change-currency": "Your currency"
+  "profile-change-currency": "Your currency",
+  "used-design-new": "New",
+  "used-design-old": "Old",
+  "user-design": "Interface variant",
+  "settings-user": "User settings"
 }
