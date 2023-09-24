@@ -1,8 +1,6 @@
 import React, { memo } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
-import { Drawer } from 'src/shared/ui/redesigned/Drawer'
-import { Modal } from 'src/shared/ui/redesigned/Modal'
 import cls from './RatingCard.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Card } from '@/shared/ui/Card'
@@ -11,6 +9,8 @@ import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
 import { Input } from '@/shared/ui/deprecated/Input'
 import { StarRating } from '@/shared/ui/deprecated/StarRating'
 import { Text } from '@/shared/ui/deprecated/Text'
+import { Drawer } from '@/shared/ui/redesigned/Drawer'
+import { Modal } from '@/shared/ui/redesigned/Modal'
 
 interface RatingCardProps {
   className?: string

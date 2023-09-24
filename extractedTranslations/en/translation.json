@@ -83,5 +83,7 @@
   "used-design-old": "used-design-old",
   "user-design": "user-design",
   "you-use-like-rating": "you-use-like-rating",
-  "your-feedback": "your-feedback"
+  "your-feedback": "your-feedback",
+  "{{count}} views-to": "",
+  "{{count}} views-to_plural": ""
 }
