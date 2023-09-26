@@ -1,0 +1,17 @@
+.Code {
+  position: relative;
+
+  overflow: auto;
+
+  padding: 20px;
+
+  background: var(--light-bg-redesigned);
+  border: 1px solid var(--accept-redesigned);
+  border-radius: 16px;
+}
+
+.copy {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
