@@ -25,7 +25,7 @@ export const AdditionalInfoContainer: React.FC<AdditionalInfoContainerProps> =
     }
 
     return (
-      <Card className={className}>
+      <Card className={className} padding={'24'} borderRadius={'round'}>
         <ArticleAdditionalInfo
           author={article.user}
           createdAt={article.createdAt}
