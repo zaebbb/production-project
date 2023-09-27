@@ -9,6 +9,7 @@ import {
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import cls from './ArticleDetails.module.scss'
+import { ArticleDetailsSkeleton } from './ArticleDetails.skeleton'
 import { renderArticleBlock } from './renderBlock'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
@@ -18,7 +19,6 @@ import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Icon as IconDeprecated } from '@/shared/ui/Icon'
 import { Avatar as AvatarDeprecated, AvatarSize } from '@/shared/ui/deprecated/Avatar'
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton'
 import { Text as TextDeprecated, TextSize, TextTheme } from '@/shared/ui/deprecated/Text'
 import { AppImages } from '@/shared/ui/redesigned/AppImages'
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton'
@@ -116,13 +116,7 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> =
 
     if (isLoading) {
       content = (
-        <div>
-          <SkeletonDeprecated width={100} height={100} border={'50%'} className={cls.avatar} />
-          <SkeletonDeprecated width={400} height={32} border={'8px'} className={cls.title} />
-          <SkeletonDeprecated width={300} height={24} border={'8px'} className={cls.skeleton} />
-          <SkeletonDeprecated width={'100%'} height={100} border={'8px'} className={cls.skeleton} />
-          <SkeletonDeprecated width={'100%'} height={100} border={'8px'} className={cls.skeleton} />
-        </div>
+        <ArticleDetailsSkeleton />
       )
     } else if (error) {
       content = (

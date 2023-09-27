@@ -15,9 +15,12 @@ import cls from './ArticleDetailsComments.module.scss'
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/addCommentForm'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextSize } from '@/shared/ui/deprecated/Text'
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text'
+import { VStack } from '@/shared/ui/redesigned/Stack'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 interface ArticleDetailsCommentsProps {
   className?: string
@@ -44,19 +47,41 @@ export const ArticleDetailsComments: React.FC<ArticleDetailsCommentsProps> =
     })
 
     return (
-      <div className={classNames(cls.ArticleDetailsComments, {}, [className])}>
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('article-comments')}
-        />
-        <AddCommentForm
-          onSendComment={onSendComment}
-        />
-        <CommentList
-          comments={comments}
-          isLoading={commentsIsLoading}
-        />
-      </div>
+      <ToggleFeatures
+        feature={'isAppRedesigned'}
+        off={
+          <div className={classNames(cls.ArticleDetailsComments, {}, [className])}>
+            <TextDeprecated
+              size={TextSize.L}
+              className={cls.commentTitle}
+              title={t('article-comments')}
+            />
+            <AddCommentForm
+              onSendComment={onSendComment}
+            />
+            <CommentList
+              comments={comments}
+              isLoading={commentsIsLoading}
+            />
+          </div>
+        }
+        on={
+          <VStack className={classNames('', {}, [className])}>
+            <Text
+              size={'l'}
+              className={cls.commentTitle}
+              title={t('article-comments')}
+            />
+            <AddCommentForm
+              onSendComment={onSendComment}
+            />
+            <CommentList
+              comments={comments}
+              isLoading={commentsIsLoading}
+            />
+          </VStack>
+        }
+      />
+
     )
   })
