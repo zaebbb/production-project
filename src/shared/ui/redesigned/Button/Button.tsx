@@ -3,6 +3,7 @@ import cls from './Button.module.scss'
 import { type Additional, classNames, type Mods } from '@/shared/lib/classNames/classNames'
 
 export type VariantButton = 'clear' | 'outline' | 'filled'
+export type VariantColor = 'normal' | 'success' | 'cancel'
 
 export type SizeButton = 'm' | 'l' | 'xl'
 
@@ -30,6 +31,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean
   addonLeft?: React.ReactNode
   addonRight?: React.ReactNode
+  color?: VariantColor
 }
 
 export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
@@ -37,6 +39,7 @@ export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
     className,
     children,
     variant = 'outline',
+    color = 'normal',
     square,
     size = 'm',
     disabled = false,
@@ -56,6 +59,7 @@ export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
     className,
     cls[variant],
     cls[size],
+    cls[color],
   ]
 
   return (

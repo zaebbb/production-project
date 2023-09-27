@@ -10,8 +10,9 @@ import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
 import { AppLink as AppLinkDeprecated, AppLinkTheme } from '@/shared/ui/deprecated/AppLink'
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Button as ButtonDeprecated, ThemeButton } from '@/shared/ui/deprecated/Button'
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
+import { Button } from '@/shared/ui/redesigned/Button'
 import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface NavbarProps {
@@ -73,13 +74,13 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
       feature={'isAppRedesigned'}
       off={
         <header className={classNames(cls.Navbar, {}, [className])}>
-          <Button
+          <ButtonDeprecated
             theme={ThemeButton.CLEAR_INVERTED}
             onClick={onShowModal}
             className={cls.links}
           >
             {t('login-account')}
-          </Button>
+          </ButtonDeprecated>
 
           {isAuthModal && (
             <LoginModal
@@ -90,11 +91,11 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
         </header>
       }
       on={
-        <header className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
           <Button
-            theme={ThemeButton.CLEAR_INVERTED}
             onClick={onShowModal}
             className={cls.links}
+            variant={'clear'}
           >
             {t('login-account')}
           </Button>

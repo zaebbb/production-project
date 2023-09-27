@@ -8,10 +8,13 @@ import { profileActions } from '../../model/slice/profileSlice'
 import cls from './EditableProfileCardHeader.module.scss'
 import { getUserAuthData } from '@/entities/User'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { HStack } from '@/shared/ui/Stack'
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
-import { Text } from '@/shared/ui/deprecated/Text'
+import { Button as ButtonDeprecated, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text'
+import { Button } from '@/shared/ui/redesigned/Button'
+import { HStack } from '@/shared/ui/redesigned/Stack'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 interface EditableProfileCardHeaderProps {
   className?: string
@@ -46,34 +49,75 @@ export const EditableProfileCardHeader: React.FC<EditableProfileCardHeaderProps>
         justify={'space-between'}
         className={classNames(cls.EditableProfileCardHeader, {}, [className])}
       >
-        <Text title={t('profile')} />
+        <ToggleFeatures
+          feature={'isAppRedesigned'}
+          off={<TextDeprecated title={t('profile')} />}
+          on={<Text title={t('profile')} />}
+        />
+
         {canEdit && (
           <HStack gap={16}>
             {readonly ? (
-              <Button
-                theme={ThemeButton.OUTLINE}
-                onClick={onEdit}
-                data-testid={'editable-profile-card-header-edit-button'}
-              >
-                {t('profile-edit')}
-              </Button>
+              <ToggleFeatures
+                feature={'isAppRedesigned'}
+                off={
+                  <ButtonDeprecated
+                    theme={ThemeButton.OUTLINE}
+                    onClick={onEdit}
+                    data-testid={'editable-profile-card-header-edit-button'}
+                  >
+                    {t('profile-edit')}
+                  </ButtonDeprecated>
+                }
+                on={
+                  <Button
+                    onClick={onEdit}
+                    data-testid={'editable-profile-card-header-edit-button'}
+                  >
+                    {t('profile-edit')}
+                  </Button>
+                }
+              />
             ) : (
-              <>
-                <Button
-                  theme={ThemeButton.OUTLINE}
-                  onClick={onCancelEdit}
-                  data-testid={'editable-profile-card-header-cancel-edit'}
-                >
-                  {t('profile-escape')}
-                </Button>
-                <Button
-                  theme={ThemeButton.OUTLINE}
-                  onClick={onSave}
-                  data-testid={'editable-profile-card-header-edit-save'}
-                >
-                  {t('profile-save')}
-                </Button>
-              </>
+              <ToggleFeatures
+                feature={'isAppRedesigned'}
+                off={
+                  <>
+                    <ButtonDeprecated
+                      theme={ThemeButton.OUTLINE}
+                      onClick={onCancelEdit}
+                      data-testid={'editable-profile-card-header-cancel-edit'}
+                    >
+                      {t('profile-escape')}
+                    </ButtonDeprecated>
+                    <ButtonDeprecated
+                      theme={ThemeButton.OUTLINE}
+                      onClick={onSave}
+                      data-testid={'editable-profile-card-header-edit-save'}
+                    >
+                      {t('profile-save')}
+                    </ButtonDeprecated>
+                  </>
+                }
+                on={
+                  <>
+                    <Button
+                      color={'cancel'}
+                      onClick={onCancelEdit}
+                      data-testid={'editable-profile-card-header-cancel-edit'}
+                    >
+                      {t('profile-escape')}
+                    </Button>
+                    <Button
+                      color={'success'}
+                      onClick={onSave}
+                      data-testid={'editable-profile-card-header-edit-save'}
+                    >
+                      {t('profile-save')}
+                    </Button>
+                  </>
+                }
+              />
             )}
           </HStack>
         )}
