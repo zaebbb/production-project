@@ -120,5 +120,10 @@
   &.SMALL {
     width: 230px;
     height: 350px;
+
+    .card {
+      width: 230px;
+      height: 350px;
+    }
   }
 }

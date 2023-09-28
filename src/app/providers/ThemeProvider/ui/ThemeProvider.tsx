@@ -34,6 +34,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
   ] = React.useState<Theme>(initialTheme || defaultTheme)
 
   React.useEffect(() => {
+    document.body.className = theme
+  }, [theme])
+
+  React.useEffect(() => {
     if (!isThemeInited && defaultTheme) {
       setTheme(defaultTheme)
       setIsThemeInited(true)
