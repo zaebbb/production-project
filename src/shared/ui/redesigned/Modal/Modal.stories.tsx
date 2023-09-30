@@ -1,10 +1,11 @@
 import type { ComponentStory, Meta } from '@storybook/react'
 import { ThemeDecorator } from '../../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { Portal } from '../Portal'
 import { Modal } from './Modal'
 import { Theme } from '@/shared/const'
 
 const meta: Meta<typeof Modal> = {
-  title: 'shared/Modal',
+  title: 'shared/redesigned/Modal',
   component: Modal,
   argTypes: {
 
@@ -12,7 +13,15 @@ const meta: Meta<typeof Modal> = {
 }
 
 export default meta
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />
+const Template: ComponentStory<typeof Modal> = (args) => (
+  <Portal
+    element={
+      document.getElementById('storybook-root') ?? document.getElementById('root') ?? document.body
+    }
+  >
+    <Modal {...args} />
+  </Portal>
+)
 
 export const Primary = Template.bind({})
 Primary.args = {

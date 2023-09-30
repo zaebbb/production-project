@@ -2,7 +2,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react'
 import { AppLink } from './AppLink'
 
 const meta: ComponentMeta<typeof AppLink> = {
-  title: 'shared/AppLink',
+  title: 'shared/redesigned/AppLink',
   component: AppLink,
   args: {
     to: '/',

@@ -141,6 +141,7 @@
     "react-virtuoso": "^4.4.1"
   },
   "loki": {
+    "chromeSelector": "#root",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
