@@ -2,7 +2,7 @@ import type { ComponentStory, Meta } from '@storybook/react'
 import { Menu, type MenuItem } from './Menu'
 
 const meta: Meta<typeof Menu> = {
-  title: 'shared/Menu',
+  title: 'shared/redesigned/Menu',
   component: Menu,
 }
 

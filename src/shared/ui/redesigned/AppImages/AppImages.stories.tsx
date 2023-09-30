@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { AppImages } from './AppImages'
 
 const meta: Meta<typeof AppImages> = {
-  title: 'CHANGE/AppImages',
+  title: 'shared/redesigned/AppImages',
   component: AppImages,
 }
 
