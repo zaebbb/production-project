@@ -1,5 +1,4 @@
 import React from 'react'
-import { useJsonSettings } from '@/entities/User'
 import { Theme } from '@/shared/const'
 import { LOCAL_STORAGE_THEME_KEY } from '@/shared/const/localstorage'
 import { ThemeContext } from '@/shared/lib/context/ThemeContext'
@@ -16,9 +15,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
     children,
     initialTheme,
   } = props
-  const {
-    theme: defaultTheme,
-  } = useJsonSettings()
 
   const [
     isThemeInited,
@@ -26,10 +22,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
   ] = React.useState(false)
 
   React.useEffect(() => {
-    if (defaultTheme) {
-      setTheme(defaultTheme)
+    if (initialTheme) {
+      setTheme(initialTheme)
     }
-  }, [defaultTheme])
+  }, [initialTheme])
 
   const [
     theme,
@@ -42,11 +38,11 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
   }, [theme])
 
   React.useEffect(() => {
-    if (!isThemeInited && defaultTheme) {
-      setTheme(defaultTheme)
+    if (!isThemeInited && initialTheme) {
+      setTheme(initialTheme)
       setIsThemeInited(true)
     }
-  }, [defaultTheme, isThemeInited])
+  }, [initialTheme, isThemeInited])
 
   const defaultProps = React.useMemo(() => ({
     theme,
