@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
           <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
             <HStack align={'center'} className={cls.links}>
               <NotificationButton />
-              <AvatarMenu lang={lang} />
+              <AvatarMenu className={cls.menu} lang={lang} />
             </HStack>
           </header>
         }
